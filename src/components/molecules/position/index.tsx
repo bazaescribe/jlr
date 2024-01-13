@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 
-const Position = ({ positionName, company, years, tags }) => {
+const Position = ({ positionName, company, years, tags }: { positionName: string; company: string; years: string; tags: string[];}) => {
   useEffect(() => {
     AOS.init({
       duration: 2000, // values from 0 to 3000, with step 50ms

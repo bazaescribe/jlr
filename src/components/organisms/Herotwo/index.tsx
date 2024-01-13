@@ -7,11 +7,14 @@ import { useEffect } from "react";
 
 const Herotwo = () => {
   useEffect(() => {
-    const blob = document.querySelector('.blob');
+    const blob = document.querySelector('.blob') as HTMLElement | null;
+
     
-    const moveBlob = (e) => {
-      blob.style.left = e.clientX + 'px';
-      blob.style.top = e.clientY + 'px';
+    const moveBlob = (e: MouseEvent) => {
+      if (blob) {
+        blob.style.left = e.clientX + 'px';
+        blob.style.top = e.clientY + 'px';
+      }
     };
 
     window.addEventListener('mousemove', moveBlob);
@@ -22,33 +25,35 @@ const Herotwo = () => {
   const letters = "ABCDEFGHIJKLMNOPQRSTUVXYZ0123456789"
 
   useEffect(() => {
-    const handleMouseEnter = (e) => {
-      if (!e.target.dataset.originalText) {
-        e.target.dataset.originalText = e.target.textContent;
+    const handleMouseEnter = (e: Event) => {
+      const target = e.target as HTMLElement; // Cast the event target to HTMLElement
+
+      if (!target.dataset.originalText) {
+        target.dataset.originalText = target.textContent || '';
       }
       
       let iterations = 0;
       const interval = setInterval(() => {
-        const newText = [...e.target.dataset.originalText]
-          .map(() => letters[Math.floor(Math.random() * letters.length)])
+        const originalText = target.dataset.originalText || '';
+        const newText = Array.from(originalText)
+          .map(() => letters.charAt(Math.floor(Math.random() * letters.length)))
           .join('');
-        e.target.textContent = newText;
-    
+        target.textContent = newText;
+
         if(iterations >= 7) {
           clearInterval(interval);
-          e.target.textContent = e.target.dataset.originalText; // Reset to original text
+          target.textContent = originalText; // Reset to original text
         }
-    
+
         iterations += 1;
       }, 20);
-
     };
 
-    const handleMouseLeave = (e) => {
+    const handleMouseLeave = (e: Event) => {
       console.log("Hello there!! 👀");
     };
 
-    // Select all elements with the class '.link'
+    // Select all elements with the class '.menu-item'
     const links = document.querySelectorAll('.menu-item');
 
     // Add event listeners to each link
@@ -65,6 +70,7 @@ const Herotwo = () => {
       });
     };
   }, []); // Empty dependency array means this runs once after initial render
+
 
 
 

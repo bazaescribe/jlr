@@ -6,7 +6,9 @@ import Link from 'next/link';
 import AOS from 'aos';
 import "./style.css"
 
-const ProjectSlide = ( {clientName, title, description, clientLogoSrc, desktopImageSrc, mobileImageSrc, imageDescription, className } ) => {
+const ProjectSlide = ( 
+  {clientName, title, description, clientLogoSrc, desktopImageSrc, mobileImageSrc, imageDescription, className }: 
+  {clientName:string; title:string; description: string; clientLogoSrc: string; desktopImageSrc: string; mobileImageSrc: string; imageDescription: string; className: string } ) => {
   const completeClassName = `slide-fluid project sans ${className}`;
   
   useEffect(() => {
