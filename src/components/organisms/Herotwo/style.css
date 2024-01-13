@@ -1,0 +1,93 @@
+.hero{
+  display: flex;
+  align-items: center;
+  color: white;
+  max-width: 100%;
+  min-height: 90vh;
+  /* background: 
+    radial-gradient(165.28% 52.66% at 97.43% 89.99%, #5F9 0%, rgba(85, 255, 183, 0.00) 100%), 
+    linear-gradient(90deg, #EB10FE 0%, #06F 100%); */
+  background: linear-gradient(90deg, #fe1ebf 0%, #1253f7 100%);
+  background-size: 100%;
+  z-index: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero a {
+  color: black;
+}
+
+.hero-content {
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%);
+  display: flex;
+  backdrop-filter: blur(60px);
+  position: absolute;
+}
+
+@keyframes hero-animation {
+  0% { background-position: 0% -50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.hero h1{
+  line-height: 1.2;
+  letter-spacing: -4px;
+  word-wrap: break-word;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.menu-item{
+  transition: 250ms ease all;
+}
+
+#menu:hover .menu-item {
+  opacity: 0.2;
+}
+
+#menu:hover .menu-item:hover{
+  opacity: 1;
+}
+
+.blob {
+  position: relative;
+  width: 500px; /* Blob size */
+  height: 480px;
+  background: linear-gradient(24deg, transparent, #ffa200); /* Replace with desired colors */
+  background-clip: border-box;
+  background-size: 100%;
+  background-attachment: fixed;
+  border-radius: 50%; /* Makes it circular, remove for square */
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  animation: rotate 12s linear infinite; /* Adjust the duration as needed */
+  z-index: 2;
+  opacity: 0.9;
+}
+
+@keyframes rotate {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  40%{
+    scale: 1.5 0.5;
+  }
+  60%{
+    scale: 1 1.9;
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+

@@ -1,0 +1,73 @@
+.project {
+  overflow: hidden;
+  padding-top: var(--base-size-1000);
+  display: flex;
+  flex-direction: column;
+}
+
+.project .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: var(--base-size-100);
+  text-align: center;
+  margin-bottom: var(--base-size-600);
+  padding: 0px var(--base-size-100);
+}
+
+.project .photo {
+  padding: 0px var(--base-size-400);
+}
+
+.project .photo img {
+  -webkit-filter: drop-shadow(0px -2px 80px rgba(0, 0, 0, 0.1));
+  filter: drop-shadow(0px -2px 80px rgba(0, 0, 0, 0.1));
+}
+
+.project .photo img.mobile {
+  display: none;
+}
+
+@media screen and (max-width: 540px) {
+  .project .photo { 
+    padding: 0px var(--base-size-200);
+  }
+
+  .project .photo img.mobile {
+    display: block;
+  }
+
+  .project .photo img.desktop {
+    display: none;
+  }
+}
+
+.theme-devf {
+  /* background: linear-gradient(black, violet); */
+  background: #7E1AFF;
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+.theme-devf a{
+  color: lime;
+}
+
+.theme-homely {
+  background: #FEFDF9;
+  color: black;
+}
+
+.theme-aliada{
+  background-color: #E4EAFF;
+opacity: 1;
+background-image:  radial-gradient(#afbbe9 0.8500000000000001px, transparent 0.8500000000000001px), radial-gradient(#afbbe9 0.8500000000000001px, #E4EAFF 0.8500000000000001px);
+background-size: 34px 34px;
+background-position: 0 0,17px 17px;
+  color: #28397e;
+}
+
+.theme-aliada a{
+  color: #2C57FF;
+}

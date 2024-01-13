@@ -1,0 +1,58 @@
+/* ======== general properties ======== */
+
+nav {
+  position: sticky; /* Fix the navbar to a specific position */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  background: rgba(255, 255, 255, 0.0);
+  backdrop-filter: blur(48px);
+  z-index: 999;
+}
+
+nav .container{
+  display: flex;
+  justify-content: space-between;
+}
+
+nav .container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 4%;
+  width: 92%;
+  border-bottom: 1px solid rgba(0, 0, 0, 1);
+}
+
+/* ======== left size properties ======== */
+
+nav .home{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding: var(--base-size-075) 0px;
+}
+
+nav img {
+  object-fit: cover;
+}
+
+/* ======== right size properties ======== */
+
+nav .menu{
+  display: flex;
+  gap: var(--base-size-200);
+  align-items: center;
+}
+
+nav a{
+  font-family: "Azeret Mono";
+  font-weight: 300;
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (max-width: 720) {
+  nav .menu { 
+    display: none;
+  }
+}

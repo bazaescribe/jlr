@@ -1,0 +1,44 @@
+footer {
+  background: black;
+  font-family: 'Azeret Mono', Courier, monospace;
+  font-weight: 100;
+}
+
+footer .text-secondary {
+  color: var(--color-transparent-light-40);
+}
+
+footer p{
+  color: white;
+  font-family: 'Azeret Mono', Courier, monospace;
+}
+
+footer a {
+  color: white;
+}
+
+footer a:hover {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(47.06%, #80ff00),
+    color-stop(55.61%, #1ac8b3),
+    color-stop(64.91%, #3f6ce1),
+    color-stop(73.27%, #9527ec),
+    color-stop(83.53%, #ff006b)
+  );
+  background: linear-gradient(
+    #ffbf00 47.06%,
+    #00ffe1 55.61%,
+    #ff74f8 83.53%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-attachment: fixed;
+}
+
+footer .logo{
+  filter: invert();
+}

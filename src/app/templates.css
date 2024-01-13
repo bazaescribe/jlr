@@ -1,0 +1,91 @@
+.slide { 
+  padding: var(--base-size-800) var(--base-size-400);
+}
+
+.slide-fluid{
+  padding: 0px;
+}
+
+.slide img, .slide-fluid img {
+  display: block;
+}
+
+
+.sticky-quote {
+  position: sticky;
+  top: 96px;
+}
+
+
+.colabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; /* Adjust the alignment as needed */
+}
+
+.colab {
+  flex: 0 0 50%; /* Half width for mobile and tablet */
+  box-sizing: border-box; /* To account for padding and borders */
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Add padding, margins, borders as needed */
+  color: var(--color-neutral-900);
+}
+
+.colab img {
+  filter: grayscale(100%);
+}
+
+.colab:hover.liverpool {
+  background: #E10198;
+}
+
+.colab:hover.liverpool img {
+  filter: invert(100%);
+}
+
+.colab:hover.telcel {
+  background: #0B4DA2;
+}
+
+.colab:hover.telcel img {
+  filter: invert(100%);
+}
+
+.colab:hover.udem {
+  background: #FFF500;
+}
+
+.colab:hover.careme {
+  background: #5148AF;
+}
+
+.colab:hover.careme img {
+  filter: invert(100%);
+}
+
+.colab:hover.dw {
+  background: #000;
+}
+
+.colab:hover.dw img {
+  filter: invert(100%);
+}
+
+.colab:hover.microsoft {
+  background: #f65314;
+}
+
+.colab:hover.microsoft img {
+  filter: invert(100%);
+}
+
+/* Desktop screens: 4 items per row */
+@media (min-width: 1024px) { /* This breakpoint is for desktop screens */
+  .colab {
+      flex: 0 0 25%; /* Quarter width for desktops */
+  }
+}
+

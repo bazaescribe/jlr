@@ -1,0 +1,53 @@
+
+.parent {
+  background: none;
+  position: relative;
+}
+
+.parent::before, .parent::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 160px; /* Width of the fading effect */
+  z-index: 2;
+}
+
+.parent::before {
+  left: 0;
+  background: linear-gradient(to right, #fff, transparent);
+}
+
+.parent::after {
+  right: 0;
+  background: linear-gradient(to left, #fff, transparent);
+}
+
+@keyframes logos {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  padding: 80px 0px;
+  overflow: hidden;
+  display: flex;
+  gap: 48px;
+  position: relative;
+}
+
+.logos-slide {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 64px;
+  animation: 60s linear logos infinite;
+}
+
+.logos-slide img {
+  opacity: 0.5;
+}
