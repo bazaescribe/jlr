@@ -33,7 +33,7 @@ export default function Home() {
                 </div>
                 <div className='d-flex flex-direction-column gap-200'>
                   <p>
-                    In our fast-moving world, tackling tough challenges, it's essential to craft solutions that are technically sound, economically viable, and socially responsible. As a product designer, I'm dedicated to innovative and sustainable problem-solving.
+                    In our fast-moving world, tackling tough challenges, it&#39;s essential to craft solutions that are technically sound, economically viable, and socially responsible. As a product designer, I&#39;m dedicated to innovative and sustainable problem-solving.
                   </p>
                   <p>
                     Using design thinking and a user-focused approach, I aim to create products that address immediate needs while promoting long-term wellbeing. Each solution I develop has the power to make a positive impact, driving me to innovate for a sustainable future.

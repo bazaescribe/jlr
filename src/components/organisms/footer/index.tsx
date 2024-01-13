@@ -74,7 +74,7 @@ const Footer = () => {
             <div id="map" className='d-flex flex-direction-column gap-075'>
               <p className='text-secondary'>Academic colaborations</p>
               <div>
-                <p>"El futuro del trabajo latinx."</p>
+                <p>&#34;El futuro del trabajo latinx.&#34;</p>
                 <p>Tecmilenio</p>
                 <p>2022</p>
               </div>
