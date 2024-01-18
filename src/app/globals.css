@@ -6,6 +6,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100;300;400;700&family=Gloock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100;300;400;700&family=Gilda+Display&family=Gloock&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100;300;400;700&family=Gilda+Display&family=Gloock&family=Playfair:opsz,wght@5..1200,400;5..1200,700&display=swap');
 
 
 /* ==================================== index ====================================
@@ -334,8 +336,9 @@ body {
 /* Header text setup */
 h1, h2, h3, h4, h5, h6 {
   margin: 0px;
-  font-family: 'Azeret Mono', monospace;
+  font-family: 'Playfair', serif;
   word-wrap: break-word;
+  font-weight: 600;
 }
 
 p {
@@ -355,7 +358,7 @@ h6 { font-size: 1.25rem; font-weight: 400; }
 
 /* header sizing for mobile */
 @media (max-width: 768px) {
-  h1 { font-size: 4rem; }
+  h1 { font-size: 3.5rem; }
   h2 { font-size: 3rem; }
   h3 { font-size: 2rem; }
   h4 { font-size: 1.5rem; }
@@ -365,6 +368,7 @@ h6 { font-size: 1.25rem; font-weight: 400; }
 
 a {
   text-decoration: none;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Content text setup */
@@ -2039,4 +2043,8 @@ header.dark {
 
 .position-container.visible {
   opacity: 1;
+}
+
+.filter-invert {
+  filter: invert();
 }

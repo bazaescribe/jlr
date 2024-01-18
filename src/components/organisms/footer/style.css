@@ -1,6 +1,6 @@
 footer {
   background: black;
-  font-family: 'Azeret Mono', Courier, monospace;
+  font-family: 'Inter', sans-serif;
   font-weight: 100;
 }
 
@@ -10,7 +10,7 @@ footer .text-secondary {
 
 footer p{
   color: white;
-  font-family: 'Azeret Mono', Courier, monospace;
+  font-family: 'Inter', sans-serif;
 }
 
 footer a {

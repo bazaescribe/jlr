@@ -10,6 +10,7 @@ const ProjectSlide = (
   {clientName, title, description, clientLogoSrc, desktopImageSrc, mobileImageSrc, imageDescription, className }: 
   {clientName:string; title:string; description: string; clientLogoSrc: string; desktopImageSrc: string; mobileImageSrc: string; imageDescription: string; className: string } ) => {
   const completeClassName = `slide-fluid project sans ${className}`;
+  const projectURL = 'projects/' + clientName;
   
   useEffect(() => {
     AOS.init({
@@ -32,7 +33,7 @@ const ProjectSlide = (
             <p>
               {description}
             </p>
-            <Link href="#">
+            <Link href={projectURL}>
               <h6 className='sans'>view more</h6>
             </Link>
           </div>

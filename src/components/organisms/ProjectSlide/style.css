@@ -61,12 +61,12 @@
 
 .theme-aliada{
   background-color: #E4EAFF;
-opacity: 1;
-background-image:  radial-gradient(#afbbe9 0.8500000000000001px, transparent 0.8500000000000001px), radial-gradient(#afbbe9 0.8500000000000001px, #E4EAFF 0.8500000000000001px);
-background-size: 34px 34px;
-background-position: 0 0,17px 17px;
+  opacity: 0.8;
+  background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #E4EAFF 10px ), repeating-linear-gradient( #d0dcff55, #d0dcff );
   color: #28397e;
 }
+
+
 
 .theme-aliada a{
   color: #2C57FF;

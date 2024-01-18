@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="theme-color" content="#EBFF00" /> 
+        <meta name="theme-color" content="#FFF" /> 
         <link rel="icon" href="./favicon.png" />
       </head>
       <body>{children}</body>

@@ -53,22 +53,22 @@ const Herotwo = () => {
       console.log("Hello there!! 👀");
     };
 
-    // Select all elements with the class '.menu-item'
-    const links = document.querySelectorAll('.menu-item');
+    // // Select all elements with the class '.menu-item'
+    // const links = document.querySelectorAll('.menu-item');
 
-    // Add event listeners to each link
-    links.forEach(link => {
-      link.addEventListener('mouseenter', handleMouseEnter);
-      link.addEventListener('mouseleave', handleMouseLeave);
-    });
+    // // Add event listeners to each link
+    // links.forEach(link => {
+    //   link.addEventListener('mouseenter', handleMouseEnter);
+    //   link.addEventListener('mouseleave', handleMouseLeave);
+    // });
 
-    // Cleanup function to remove event listeners
-    return () => {
-      links.forEach(link => {
-        link.removeEventListener('mouseenter', handleMouseEnter);
-        link.removeEventListener('mouseleave', handleMouseLeave);
-      });
-    };
+    // // Cleanup function to remove event listeners
+    // return () => {
+    //   links.forEach(link => {
+    //     link.removeEventListener('mouseenter', handleMouseEnter);
+    //     link.removeEventListener('mouseleave', handleMouseLeave);
+    //   });
+    // };
   }, []); // Empty dependency array means this runs once after initial render
 
 
@@ -81,7 +81,7 @@ const Herotwo = () => {
       <div className="hero-content">
         <div className="container d-flex flex-direction-column justify-content-center gap-150">
           <div>
-            <h3>José Luis Rosas Baza</h3>
+            <h5 className="sans">José Luis Rosas Baza</h5>
             <h1 className="text-bold">product, strategy and innovation</h1>
           </div>
           <div id="menu">

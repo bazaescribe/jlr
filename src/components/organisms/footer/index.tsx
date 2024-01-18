@@ -29,7 +29,10 @@ const Footer = () => {
               <Link href="#">x/twitter</Link>
               <Link href="#">resume</Link>
             </div>
-            <div id="map" className='d-flex flex-direction-column gap-075'>
+          </div>
+
+          <div id="site" className='d-flex gap-200 flex-wrap'>
+          <div id="map" className='d-flex flex-direction-column gap-075 text-secondary'>
               <p className='text-secondary'>Education</p>
               <div>
                 <p>Computer Science</p>
@@ -42,14 +45,9 @@ const Footer = () => {
                 <p>2007 - 2010</p>
               </div>
               <div>
-                <p>Computer Science</p>
-                <p>IPN</p>
-                <p>2010 - 2014</p>
-              </div>
-              <div>
-                <p>Computer Science</p>
-                <p>IPN</p>
-                <p>2010 - 2014</p>
+                <p>Design Sprint</p>
+                <p>Google Launchpad Accelerator</p>
+                <p>2016, 2018, 2022</p>
               </div>
             </div>
             <div id="map" className='d-flex flex-direction-column gap-075'>
@@ -59,11 +57,11 @@ const Footer = () => {
                 <p>2022</p>
               </div>
               <div>
-                <p>UDEM</p>
+                <p>Universidad de Monterrey</p>
                 <p>2019</p>
               </div>
               <div>
-                <p>Design Week Mexico</p>
+                <p>Design Week Mexico, Puebla</p>
                 <p>2019</p>
               </div>
               <div>
@@ -80,6 +78,7 @@ const Footer = () => {
               </div>
             </div>
           </div>
+
           <div id="info" className='d-flex justify-content-between py-150'>
             <p>
               2024

@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image'; // Importing the Image component from Next.js
 import "./style.css";
-import Logo from '@/components/atoms/logo'
+import Logo from '@/components/atoms/logo';
 
-const Navbar = () => {
+const Navbar = ({ className }) => {
   return (
-    <nav>
+    <nav className={className}>
       <div className="container">
         <div className="home">
           <Link href="/">

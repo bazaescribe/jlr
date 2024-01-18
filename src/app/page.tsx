@@ -5,7 +5,6 @@ import Position from '@/components/molecules/position';
 import Footer from '@/components/organisms/footer';
 import 'aos/dist/aos.css'
 import ProjectSlide from '@/components/organisms/ProjectSlide';
-import Hero from '@/components/organisms/Hero'
 import Herotwo from '@/components/organisms/Herotwo'
 import Carousel from '@/components/molecules/carousel';
 
@@ -20,7 +19,7 @@ export default function Home() {
           <Herotwo></Herotwo>
 
           <section>
-            <div className="scrollwatcher"></div>
+            {/* <div className="scrollwatcher"></div> */}
 
             <Navbar />
             <div id="intro"></div>
@@ -95,7 +94,7 @@ export default function Home() {
             </article>
             <div id="projects"></div>
             <ProjectSlide
-              clientName="dev.f"
+              clientName="devf"
               title="Latin America’s journey in tech education"
               description="Improving the way people learn tech skills and dive into the industry"
               clientLogoSrc='/img/devf.png' 
