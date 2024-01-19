@@ -85,19 +85,19 @@ const Herotwo = () => {
             <h1 className="text-bold">product, strategy and innovation</h1>
           </div>
           <div id="menu">
-            <Link href="#">
+            <Link href="#mailto:jlrosasb@gmail.com">
               <h4 className="menu-item">jlrosasb@gmail.com</h4>
             </Link>
-            <Link href="#">
+            <Link href="tel:5516777083">
               <h4 className="menu-item">+52 55 1677 7083</h4>
             </Link>
-            <Link href="#">
+            <Link href="https://www.linkedin.com/in/jlrosasb">
             <h4 className="menu-item">linkedin</h4>
             </Link>
-            <Link href="#">
+            <Link href="https://twitter.com/jlrosasb">
             <h4 className="menu-item">x/twitter</h4>
             </Link>
-            <Link href="#">
+            <Link href="https://drive.google.com/file/d/1iyRXeN1S7YI29ExlXSxuPcPr9lTcAvEw/view?usp=sharing">
               <h4 className="menu-item">resume</h4>
             </Link>
           </div>

@@ -14,20 +14,15 @@ const Footer = () => {
           <div id="site" className='d-flex gap-200 flex-wrap'>
             <div id="map" className='d-flex flex-direction-column gap-075'>
               <p className='text-secondary'>Site</p>
-              <Link href="#">Home</Link>
-              <Link href="#">About Me</Link>
-              <Link href="#">Case studies</Link>
-              <Link href="#">Resume</Link>
-              <Link href="#">Concepts</Link>
-              <Link href="#">Open source</Link>
+              <Link href="/">Home</Link>
+              <Link href="https://drive.google.com/file/d/1iyRXeN1S7YI29ExlXSxuPcPr9lTcAvEw/view?usp=sharing">Resume</Link>
             </div>
             <div id="map" className='d-flex flex-direction-column gap-075'>
               <p className='text-secondary'>Connect</p>
-              <Link href="#">jlrosasb@gmail.com</Link>
-              <Link href="#">+52 55 1677 7083</Link>
-              <Link href="#">linkedin</Link>
-              <Link href="#">x/twitter</Link>
-              <Link href="#">resume</Link>
+              <Link href="#mailto:jlrosasb@gmail.com">jlrosasb@gmail.com</Link>
+              <Link href="tel:5516777083">+52 55 1677 7083</Link>
+              <Link href="https://www.linkedin.com/in/jlrosasb">linkedin</Link>
+              <Link href="https://twitter.com/jlrosasb">x/twitter</Link>
             </div>
           </div>
 
