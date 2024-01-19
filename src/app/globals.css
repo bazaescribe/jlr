@@ -303,8 +303,8 @@
 }
 
 ::selection {
-  background-color: #000; /* set the background color of the selected text */
-  color: #fff; /* set the text color of the selected text */
+  background-color: #ee00ff; /* set the background color of the selected text */
+  color: #000; /* set the text color of the selected text */
   text-shadow: none; /* remove any text shadow on the selected text */
 }
 
@@ -349,12 +349,12 @@ p {
 .sans { font-family: 'Inter', sans-serif; }
 
 /* header sizing */
-h1 { font-size: 5rem; font-weight: 400; }
-h2 { font-size: 4em; font-weight: 400; }
-h3 { font-size: 3rem; font-weight: 400; }
-h4 { font-size: 2rem; font-weight: 400; }
-h5 { font-size: 1.5rem; font-weight: 400; }
-h6 { font-size: 1.25rem; font-weight: 400; }
+h1 { font-size: 6rem; font-weight: 400; }
+h2 { font-size: 5em; font-weight: 400; }
+h3 { font-size: 4rem; font-weight: 400; }
+h4 { font-size: 3rem; font-weight: 400; }
+h5 { font-size: 2rem; font-weight: 400; }
+h6 { font-size: 1.5rem; font-weight: 400; }
 
 /* header sizing for mobile */
 @media (max-width: 768px) {
@@ -901,18 +901,18 @@ a {
 
 /* ==================================== tags ==================================== */
 
-.tag{
-  font-size: 0.75rem;
-  background: var(--color-transparent-light-80);
+.tag {
+  display: flex;
+  font-size: 1rem;
+  background: var(--color-transparent-dark-20);
   color: var(--color-neutral-900);
-  border-radius: var(--base-size-025);
-  padding: var(--base-size-025) var(--base-size-050);
-  text-transform: lowercase;
-  cursor: default;
+  padding: var(--base-size-025) var(--base-size-075);
+  border-radius: var(--base-size-050);
 }
 
-.tag:hover{
-  background: linear-gradient(to left, var(--color-transparent-light-80), rgba(255, 141, 251, 0.2));
+.dark .tag{
+  background: var(--color-transparent-light-20);
+  color: var(--color-neutral-100);
 }
 
 /* Tools */
@@ -990,9 +990,8 @@ visual aesthetics on your website or application. */
 /* Base styles */
 
 .dark {
-  background: var(--color-neutral-900);
-  color: var(--color-neutral-100);
-  border-color: 1px solid var(--color-transparent-light-20);
+  background: black;
+  color: white;
 }
 
 .light {
@@ -1219,14 +1218,6 @@ header {
   box-sizing: border-box;
 }
 
-header.light {
-  background: var(--color-neutral-solid-10);
-}
-
-header.dark {
-  background: var(--color-neutral-solid-80);
-}
-
 .container {
   width: 90%;
   max-width: 1280px;
@@ -1365,15 +1356,6 @@ header {
   width: 100%;
   box-sizing: border-box;
 }
-
-header.light {
-  background: var(--color-neutral-solid-10);
-}
-
-header.dark {
-  background: var(--color-neutral-solid-80);
-}
-
 .container {
   width: 85%;
   max-width: 1280px;
@@ -1455,9 +1437,8 @@ header.dark {
 /* Base styles */
 
 .dark {
-  background: var(--color-neutral-900);
-  color: var(--color-neutral-100);
-  border: 1px solid var(--color-transparent-light-10) !important;
+  background: black;
+  color: white;
 }
 
 .light {
@@ -2047,4 +2028,30 @@ header.dark {
 
 .filter-invert {
   filter: invert();
+}
+
+
+.full-width-image-container, .contain-image-container {
+  display: block; /* Ensures the div takes up the full width available */
+  width: 100%; /* Sets the width of the div to 100% of its parent */
+  height: auto; /* Adjusts the height automatically based on the content */
+  position: relative; /* Position relative to allow absolute positioning of images */
+}
+
+.full-width-image-container img {
+  width: 100%; /* Sets the image width to 100% of the div */
+  height: 100%; /* Sets the image height to 100% of the div */
+  object-fit: cover; /* Ensures the image covers the entire div without distortion */
+  position: absolute; /* Position the image absolutely within the div */
+  top: 0;
+  left: 0;
+}
+
+.contain-image-container img {
+  width: 100%; /* Sets the image width to 100% of the div */
+  height: 100%; /* Sets the image height to 100% of the div */
+  object-fit: contain; /* Ensures the image covers the entire div without distortion */
+  position: absolute; /* Position the image absolutely within the div */
+  top: 0;
+  left: 0;
 }

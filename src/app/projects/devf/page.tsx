@@ -10,296 +10,236 @@ import Image from 'next/image'
 import './style.css'
 
 export default function DevF() {
-  const [titleWidth, setTitleWidth] = useState('50%');
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const windowHeight = window.innerHeight;
-      let newWidth = Math.min(100, 50 + (scrollY / windowHeight) * 100) + '%';
-      setTitleWidth(newWidth);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   return (
     <>
       <Navbar className="dark"></Navbar>
-      <header>
-        <div className='cover'>
-          <Image src='/photos/devf-hub.png' width='1440' height='800'></Image>
-        </div>
-        <div className='title' style={{ width: titleWidth }}>
-          <Image src='/img/devf.png' width='130' height='30' className='filter-invert'></Image>
-          <h3 className='text-bold center text'>Kickstarting +15k Professional Dreams</h3>
+
+      <header className='dark future'>
+        <div className="title">
+          <div className="container d-flex flex-direction-column gap-500">
+            <div className='d-flex flex-direction-column gap-050'>
+              <h5 className="sans">dev.f</h5>
+              <h2>Challenges in the expansion of tech education</h2>
+              <p>Following the lockdowns, the company shifted from in-person classes to remote ones, this boosted the impact but brought new challenges to the team </p>
+            </div>
+            <div className='full-width-image-container' style={{ height: '480px'}}>
+              <Image src='/photos/devf-hub.png' width='1440' height='800' alt='devf-impact-hub'></Image>
+            </div>
+          </div>
         </div>
       </header>
 
-      <section className="container py-800 d-flex flex-direction-column gap-800">
-        <article>
+      <section className='dark py-1000 d-flex flex-direction-column gap-1k'>
+        <article className="container d-flex flex-direction-column gap-400">
+
+          <div className='d-flex flex-direction-column gap-100'>
+            <div>
+              <h5>Services provided</h5>
+            </div>
+            <div className='d-flex flex-wrap gap-100'>
+              <div className="tag">strategy</div>
+              <div className="tag">research</div>
+              <div className="tag">design</div>
+              <div className="tag">development</div>
+              <div className="tag">management</div>
+            </div>
+          </div>
+
+          <div className='d-flex flex-direction-column gap-100'>
+            <div>
+              <h5>Sector</h5>
+            </div>
+            <div className='d-flex flex-wrap gap-100'>
+              <div className="tag">education</div>
+            </div>
+          </div>
+          
+        </article>
+
+        <article className="container">
           <h4>
-            DEV.F is one of the biggest and most acclaimed coding bootcamps in LATAM, teaching development, data science, and design to thousands of students all across the region.
+            DEV.F, a technological training company in Latin America, began its operations in 2015, offering in-person software development courses in Mexico City. Over time, the company expanded within the countrty and lately all across Latin America.
           </h4>
         </article>
-        <article>
-          <div className="row gap-150">
+        <article className="container">
+          <div className="row gap-500">
             <div className='d-flex flex-direction-column gap-200'>
+              <h3>So... what&#39;s up?</h3>
               <p>
-                In our fast-moving world, tackling tough challenges, it&#39;s essential to craft solutions that are technically sound, economically viable, and socially responsible. As a product designer, I&#39;m dedicated to innovative and sustainable problem-solving.
+                During the pandemic, dev.f&#39;s transition to online courses brought about exponential growth, leveraging the benefits of flexibility and reduced operational costs.
               </p>
               <p>
-                Using design thinking and a user-focused approach, I aim to create products that address immediate needs while promoting long-term wellbeing. Each solution I develop has the power to make a positive impact, driving me to innovate for a sustainable future.
+                However, this shift presented significant challenges, including the difficulty of creating interpersonal relationships that foster professional development and the need to maintain consistent educational quality despite the expansion and the incorporation of new instructors.
               </p>
-              <div className='d-flex flex-direction-column gap-200'>
-                
-                <Position 
-                  positionName="Design Engineer" 
-                  company="DEV.F" 
-                  years="2019 - Present"
-                  tags={['product', 'edtech', 'startup', 'design', 'front end']}
-                />
-                <Position 
-                  positionName="Lead Product Designer" 
-                  company="homely.mx" 
-                  years="2017 - Present"
-                  tags={['product', 'ux','growth', 'services', 'social impact', 'managenent']}
-                />
-                <Position 
-                  positionName="CPO & Founder" 
-                  company="careme.mx" 
-                  years="2019 - 2023"
-                  tags={['venture', 'healthTech', 'product', 'growth', 'entrepreneurship']}
-                />
-                <Position 
-                  positionName="Product Design School Director" 
-                  company="DEV.F" 
-                  years="2016 - 2017"
-                  tags={['ux', 'ui', 'research', 'testing']}
-                />
-                <Position 
-                  positionName="Product Designer" 
-                  company="aliada.mx" 
-                  years="2016 - 2017"
-                  tags={['ux', 'ui', 'research', 'testing']}
-                />
-                <Position 
-                  positionName="Junior Product Designer" 
-                  company="Red Wolf Innovation" 
-                  years="2018 - Present"
-                  tags={['UI/UX', 'Product Design', 'Creative']}
-                />
-                <Position 
-                  positionName="Web Developer" 
-                  company="CONDUSEF" 
-                  years="2014 - 2015"
-                  tags={['UI/UX', 'Product Design', 'Creative']}
-                />
-                <Position 
-                  positionName="Software Developer" 
-                  company="Freelance" 
-                  years="2010 - 2014"
-                  tags={['UI/UX', 'Product Design', 'Creative']}
-                />
+              <div className='d-flex flex-direction-column gap-400'>
+                <div>
+                  <h2>Since 2016</h2>
+                  <p>
+                    re shapping the way people learn about technology
+                  </p>
+                </div>
+                <div>
+                  <h2>15,000 students</h2>
+                  <p>
+                    enroled in Mexico, Latin America and the US.
+                  </p>
+                </div>
+                <div>
+                  <h2>125x net growth</h2>
+                  <p>
+                    from 120 students in 2017 to over 15,000 in 2023
+                  </p>
+                </div>
+                <div>
+                  <h2>+600 new students</h2>
+                  <p>
+                    every month
+                  </p>
+                </div>
               </div>
             </div>
             <div>
-              <div className='sticky-quote'>
-                <Image src='/photos/devf-teacher.png' width='590' height='701'></Image>
-                <p className="small">Fotografia propiedad de dev.f</p>
+              <div className='sticky-quote d-flex flex-direction-column gap-050'>
+                <div className='full-width-image-container' style={{ height: '600px'}}>
+                  <Image src='/photos/devf-teacher.png' width='590' height='701' alt='teaching kids in devf'></Image>
+                </div>
+                <p className="small text-secondary-light">Fotografia propiedad de dev.f</p>
               </div>
             </div>
           </div>
         </article>
-      </section>
 
-      <section className='container'>
-        <article>
-          <h4>
-            DEV.F is one of the biggest and most acclaimed coding bootcamps in LATAM, teaching development, data science, and design to thousands of students all across the region.
-          </h4>
-        </article>
-        <article className="py-800">
-          <div className="row gap-150">
+        <article className='container'>
+          <div className="row gap-500">
+            <div></div>
             <div className='d-flex flex-direction-column gap-200'>
+              <h3>Challenges</h3>
               <p>
-                In our fast-moving world, tackling tough challenges, it&#39;s essential to craft solutions that are technically sound, economically viable, and socially responsible. As a product designer, I&#39;m dedicated to innovative and sustainable problem-solving.
+              The transition to online courses significantly impacted dev.f&#39;s dynamics and expansion. This change prompted a reevaluation of the company&#39;s operational approach and student engagement.
               </p>
               <p>
-                Using design thinking and a user-focused approach, I aim to create products that address immediate needs while promoting long-term wellbeing. Each solution I develop has the power to make a positive impact, driving me to innovate for a sustainable future.
+              A major challenge for dev.f was sustaining interpersonal connections and educational quality in the online format. The remote environment posed distinct hurdles in replicating the engagement of traditional, in-person classes.
               </p>
-              <div className='d-flex flex-direction-column gap-200'>
-                
-                <Position 
-                  positionName="Design Engineer" 
-                  company="DEV.F" 
-                  years="2019 - Present"
-                  tags={['product', 'edtech', 'startup', 'design', 'front end']}
-                />
-                <Position 
-                  positionName="Lead Product Designer" 
-                  company="homely.mx" 
-                  years="2017 - Present"
-                  tags={['product', 'ux','growth', 'services', 'social impact', 'managenent']}
-                />
-                <Position 
-                  positionName="CPO & Founder" 
-                  company="careme.mx" 
-                  years="2019 - 2023"
-                  tags={['venture', 'healthTech', 'product', 'growth', 'entrepreneurship']}
-                />
-                <Position 
-                  positionName="Product Design School Director" 
-                  company="DEV.F" 
-                  years="2016 - 2017"
-                  tags={['ux', 'ui', 'research', 'testing']}
-                />
-                <Position 
-                  positionName="Product Designer" 
-                  company="aliada.mx" 
-                  years="2016 - 2017"
-                  tags={['ux', 'ui', 'research', 'testing']}
-                />
-                <Position 
-                  positionName="Junior Product Designer" 
-                  company="Red Wolf Innovation" 
-                  years="2018 - Present"
-                  tags={['UI/UX', 'Product Design', 'Creative']}
-                />
-                <Position 
-                  positionName="Web Developer" 
-                  company="CONDUSEF" 
-                  years="2014 - 2015"
-                  tags={['UI/UX', 'Product Design', 'Creative']}
-                />
-                <Position 
-                  positionName="Software Developer" 
-                  company="Freelance" 
-                  years="2010 - 2014"
-                  tags={['UI/UX', 'Product Design', 'Creative']}
-                />
+            </div>
+          </div>
+        </article>
+
+        <article className='container'>
+          <div className='contain-image-container' style={{ height: '450px', background: 'white'}}>
+            <Image src='/photos/planning.png' width='1200' height='466' alt='planning screenshot'></Image>
+          </div>
+        </article>
+
+        <article className="container">
+          <div className="row gap-500">
+            <div className='d-flex flex-direction-column gap-200'>
+              <h3>Understanding</h3>
+              <p>
+                A thorough review focused on the company&#39;s growth, course offerings, and transition to online education. Analysis of financial reports, student enrollment data, and course feedback offered insights into the company&#39;s development and challenges.
+              </p>
+              <p>
+                Interviews with students and teachers identified key online learning challenges, including communication, material accessibility, and educational quality, providing insights into the content management system&#39;s effectiveness.
+              </p>
+            </div>
+            <div></div>
+          </div>
+        </article>
+
+        <article className='container'>
+          <div className='contain-image-container' style={{ height: '450px', background: 'white'}}>
+            <Image src='/photos/sequence.png' width='1200' height='466' alt='diagrama de secuencia'></Image>
+          </div>
+        </article>
+
+        <article className='container'>
+          <div className="row gap-500">
+            <div></div>
+            <div className='d-flex flex-direction-column gap-200'>
+              <h3>Design & development</h3>
+              <p>
+              The design and development process prioritized scalability and rapid implementation. Efforts were concentrated on creating a flexible system that could easily accommodate the growing number of students and courses.
+              </p>
+              <p>
+              The focus was on ensuring quick deployment of new features and updates to meet the dynamic needs of the online learning environment, while maintaining high standards of quality and user experience.
+              </p>
+              <p>
+              During this phase many different technologies were used, the design tool of choice was Figma taking advantage of the variables and components features. Meanwhile the web development stack is React/Next for ensuring the best performance and compatibility with SEO.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article className='container d-flex flex-direction-column gap-500'>
+          <div className="row gap-500">
+            <div>
+              <div className='contain-image-container' style={{ height: '450px', background: 'white'}}>
+                <Image src='/photos/course-arch.png' width='1200' height='466' alt='arquitectura de los programas'></Image>
               </div>
             </div>
             <div>
-              <div className='sticky-quote'>
-                <Image src='/photos/devf-teacher.png' width='590' height='701'></Image>
-                <p className="small">Fotografia propiedad de dev.f</p>
+              <div className='full-width-image-container' style={{ height: '450px', background: 'white'}}>
+                <Image src='/photos/sketch-1.png' width='1200' height='466' alt='sketch para devf'></Image>
+              </div>
+            </div>
+          </div>
+          <div className="row gap-500">
+            <div>
+              <div className='full-width-image-container' style={{ height: '450px', background: 'white'}}>
+                <Image src='/photos/sketch-2.png' width='1200' height='466' alt='sketch para devf'></Image>
+              </div>
+            </div>
+            <div>
+              <div className='full-width-image-container' style={{ height: '450px', background: 'white'}}>
+                <Image src='/photos/sketch-3.png' width='1200' height='466' alt='sketch para devf'></Image>
+              </div>
+            </div>
+          </div>
+          <div className="row gap-500">
+            <div>
+              <div className='full-width-image-container' style={{ height: '720px', background: 'white'}}>
+                <Image src='/photos/wireframe.png' width='1200' height='466' alt='wireframe vista principal de campus para devf'></Image>
+              </div>
+            </div>
+          </div>
+          <div className="row gap-500">
+            <div>
+              <div className='full-width-image-container' style={{ height: '720px', background: 'white'}}>
+                <Image src='/photos/mockup-1.png' width='1200' height='466' alt='mockup vista principal de campus para devf'></Image>
+              </div>
+            </div>
+          </div>
+          <div className="row gap-500">
+            <div>
+              <div className='full-width-image-container' style={{ height: '720px', background: 'white'}}>
+                <Image src='/photos/mockup-2.png' width='1200' height='466' alt='mockup para devf'></Image>
+              </div>
+            </div>
+          </div>
+          <div className="row gap-500">
+            <div>
+              <div className='full-width-image-container' style={{ height: '720px', background: 'white'}}>
+                <Image src='/photos/mockup-3.png' width='1200' height='466' alt='mock up para devf'></Image>
+              </div>
+            </div>
+          </div>
+          <div className="row gap-500">
+            <div>
+              <div className='full-width-image-container' style={{ height: '450px', background: 'white'}}>
+                <Image src='/photos/component-1.png' width='1200' height='466' alt='componentes controles'></Image>
+              </div>
+            </div>
+            <div>
+              <div className='full-width-image-container' style={{ height: '450px', background: 'white'}}>
+                <Image src='/photos/component-2.png' width='1200' height='466' alt='colección de botones como componentes'></Image>
               </div>
             </div>
           </div>
         </article>
+
+
       </section>
 
-      <section>hello</section>
-
-      <section className='container'>
-        <article>
-          <h4>
-            DEV.F is one of the biggest and most acclaimed coding bootcamps in LATAM, teaching development, data science, and design to thousands of students all across the region.
-          </h4>
-        </article>
-        <article className="py-800">
-          <div className="row gap-150">
-            <div className='d-flex flex-direction-column gap-200'>
-              <p>
-                In our fast-moving world, tackling tough challenges, it&#39;s essential to craft solutions that are technically sound, economically viable, and socially responsible. As a product designer, I&#39;m dedicated to innovative and sustainable problem-solving.
-              </p>
-              <p>
-                Using design thinking and a user-focused approach, I aim to create products that address immediate needs while promoting long-term wellbeing. Each solution I develop has the power to make a positive impact, driving me to innovate for a sustainable future.
-              </p>
-              <div className='d-flex flex-direction-column gap-200'>
-
-                <div className='d-flex flex-direction-column gap-050'>
-                  <h2>
-                    15,000 students
-                  </h2>
-                  <p>
-                    enroled in Mexico, Colombia, the US and 11 more countries
-                  </p>
-                </div>
-
-                <div className='d-flex flex-direction-column gap-050'>
-                  <h2>
-                    125x net growth
-                  </h2>
-                  <p>
-                    enroled in Mexico, Colombia, the US and 11 more countries
-                  </p>
-                </div>
-
-                <div className='d-flex flex-direction-column gap-050'>
-                  <h2>
-                    +600 new students
-                  </h2>
-                  <p>
-                    enroled in Mexico, Colombia, the US and 11 more countries
-                  </p>
-                </div>
-                
-                
-                <Position 
-                  positionName="Design Engineer" 
-                  company="DEV.F" 
-                  years="2019 - Present"
-                  tags={['product', 'edtech', 'startup', 'design', 'front end']}
-                />
-                <Position 
-                  positionName="Lead Product Designer" 
-                  company="homely.mx" 
-                  years="2017 - Present"
-                  tags={['product', 'ux','growth', 'services', 'social impact', 'managenent']}
-                />
-                <Position 
-                  positionName="CPO & Founder" 
-                  company="careme.mx" 
-                  years="2019 - 2023"
-                  tags={['venture', 'healthTech', 'product', 'growth', 'entrepreneurship']}
-                />
-                <Position 
-                  positionName="Product Design School Director" 
-                  company="DEV.F" 
-                  years="2016 - 2017"
-                  tags={['ux', 'ui', 'research', 'testing']}
-                />
-                <Position 
-                  positionName="Product Designer" 
-                  company="aliada.mx" 
-                  years="2016 - 2017"
-                  tags={['ux', 'ui', 'research', 'testing']}
-                />
-                <Position 
-                  positionName="Junior Product Designer" 
-                  company="Red Wolf Innovation" 
-                  years="2018 - Present"
-                  tags={['UI/UX', 'Product Design', 'Creative']}
-                />
-                <Position 
-                  positionName="Web Developer" 
-                  company="CONDUSEF" 
-                  years="2014 - 2015"
-                  tags={['UI/UX', 'Product Design', 'Creative']}
-                />
-                <Position 
-                  positionName="Software Developer" 
-                  company="Freelance" 
-                  years="2010 - 2014"
-                  tags={['UI/UX', 'Product Design', 'Creative']}
-                />
-              </div>
-            </div>
-            <div>
-              <div className='sticky-quote'>
-                <Image src='/photos/devf-teacher.png' width='590' height='701'></Image>
-                <p className="small">Fotografia propiedad de dev.f</p>
-              </div>
-            </div>
-          </div>
-        </article>
-      </section>
       <Footer></Footer>
     </>
   );

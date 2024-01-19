@@ -3,7 +3,7 @@ import Image from 'next/image'; // Importing the Image component from Next.js
 import "./style.css";
 import Logo from '@/components/atoms/logo';
 
-const Navbar = ({ className }) => {
+const Navbar = ({ className = '' }) => {
   return (
     <nav className={className}>
       <div className="container">

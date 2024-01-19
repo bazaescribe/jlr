@@ -3,6 +3,7 @@ import Navbar from '@/components/molecules/navbar'
 import Link from 'next/link'
 import Position from '@/components/molecules/position';
 import Footer from '@/components/organisms/footer';
+import Project from '@/components/molecules/project';
 import 'aos/dist/aos.css'
 import ProjectSlide from '@/components/organisms/ProjectSlide';
 import Herotwo from '@/components/organisms/Herotwo'
@@ -26,7 +27,7 @@ export default function Home() {
             <article className="container py-800">
               <div className="row gap-150">
                 <div>
-                  <h2 className='sticky-quote text-bold'>
+                  <h2 className='sticky-quote'>
                     Building a better <span className='highlight-pink'>future</span> through <span className='highlight-green'>innovation</span>
                   </h2>
                 </div>
@@ -93,38 +94,27 @@ export default function Home() {
               
             </article>
             <div id="projects"></div>
-            <ProjectSlide
-              clientName="devf"
-              title="Latin America’s journey in tech education"
-              description="Improving the way people learn tech skills and dive into the industry"
-              clientLogoSrc='/img/devf.png' 
-              desktopImageSrc="/img/devf-sc-desktop.png"
-              mobileImageSrc="/img/devf-sc-mobile.png"
-              imageDescription="Campus learning platform"
-              className="theme-devf"
-            />
-            <ProjectSlide
-              clientName="homely"
-              title="The operative system for your facilities"
-              description="Improving the way people learn tech skills and dive into the industry"
-              clientLogoSrc='/img/homely.png' 
-              desktopImageSrc="/img/homely-sc-desktop.png"
-              mobileImageSrc="/img/homely-sc-mobile.png"
-              imageDescription="Campus learning platform"
-              className="theme-homely"
-            />
-            <ProjectSlide
-              clientName="aliada"
-              title="Bringing joy to over one million homes"
-              description="Improving the way people learn tech skills and dive into the industry"
-              clientLogoSrc='/img/aliada.png' 
-              desktopImageSrc="/img/aliada-sc-desktop.png"
-              mobileImageSrc="/img/aliada-sc-mobile.png"
-              imageDescription="Campus learning platform"
-              className="theme-aliada"
-            />
+            <div id="case-studies" className='container d-flex flex-direction-column gap-500 py-800'>
+              <div className='d-flex flex-direction-column gap-025'>
+                <h6 className="sans">Case Studies</h6>
+                <h2>Sweet dreams (Are made in here)</h2>
+                <p>
+                  The projects featured here illustrate my approach to overcoming challenges, my commitment to functional aesthetics, and my continuous pursuit of pushing the boundaries of what is possible in product design.
+                </p>
+              </div>
+              
+
+              <div className='row gap-100'> 
+                <Project client="devf" title="A tech education journey in Latin America" />
+              </div>
+              <div className='row gap-500'> 
+                <Project client="homely" title="Bringing joy to the enterprise" />
+                <Project client="aliada" title="Making homes out of a million houses" />
+              </div>
+            </div>
             <Carousel></Carousel>
           </section>
+
           <Footer></Footer>
         </div>
       </main>

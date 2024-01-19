@@ -1,0 +1,20 @@
+a {
+  color: black;
+}
+
+.full-width-image-container {
+  overflow: hidden;
+}
+
+.full-width-image-container img {
+  transition: 250ms ease all;
+}
+
+.project {
+  cursor: pointer;
+}
+
+.project:hover img {
+  scale: 1.1;
+  transition: 250ms ease all;
+}
