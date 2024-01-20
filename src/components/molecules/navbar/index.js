@@ -7,17 +7,18 @@ const Navbar = ({ className = '' }) => {
   return (
     <nav className={className}>
       <div className="container">
-        <div className="home">
-          <Link href="/">
+        <Link href="/">
+          <div className="home">
+            <div className="blob-1"></div>
+            <div className="blob-2"></div>
+            <div className="blob-3"></div>
+            <div className="lens"></div>
             <Logo></Logo>
-          </Link>
-        </div>
+          </div>
+        </Link>
         <div className="menu">
-          <Link href="#intro">
-            about me
-          </Link>
-          <Link href="#projects">
-            case studies
+          <Link href="#intro" className='btn'>
+            let&#39;s connect
           </Link>
         </div>
       </div>

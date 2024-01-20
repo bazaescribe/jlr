@@ -1,103 +1,138 @@
+'use client'
+
+import React, { useEffect } from 'react';
+
 import Image from 'next/image'
 import Navbar from '@/components/molecules/navbar'
 import Link from 'next/link'
 import Position from '@/components/molecules/position';
 import Footer from '@/components/organisms/footer';
 import Project from '@/components/molecules/project';
+import AOS from 'aos';
 import 'aos/dist/aos.css'
 import ProjectSlide from '@/components/organisms/ProjectSlide';
 import Herotwo from '@/components/organisms/Herotwo'
 import Carousel from '@/components/molecules/carousel';
 
 export default function Home() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
+  useEffect(() => {
+    const expandingArticle = document.getElementById('expandingArticle');
+  
+    const handleScroll = () => {
+      if (expandingArticle) {
+        const articleRect = expandingArticle.getBoundingClientRect();
+        const articleTop = articleRect.top;
+        const articleHeight = articleRect.height;
+        const windowHeight = window.innerHeight;
+  
+        // Check if the article is in the viewport
+        if (articleTop < windowHeight) {
+          // Calculate the proportion of the article that is visible
+          const visibleHeight = Math.min(articleHeight, windowHeight - articleTop);
+          const proportionVisible = visibleHeight / articleHeight;
+  
+          // Calculate the width based on the proportion visible
+          let width = 75 + (proportionVisible * 50); // Width ranges from 50% to 100%
+          width = Math.min(100, width);
+  
+          expandingArticle.style.width = `${width}%`;
+        }
+      }
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+  
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+  
+  
+  
   return (
     <>
-      
       <main>
+      <Navbar />
         <div className="">
-
           <Herotwo></Herotwo>
 
-          <section>
-            {/* <div className="scrollwatcher"></div> */}
+          <section className='d-flex flex-direction-column justify-content-center align-items-center'>
+            <article className="dark py-900 text-align-center" id="expandingArticle">
+              <div data-aos="fade-up" className="container">
+                <h2>Can&#39;t stop <br /> rock & roll</h2>
+                <p className="caption">building beautiful software for quite a while</p>
+              </div>
+            </article>
+          </section>
 
-            <Navbar />
-            <div id="intro"></div>
-            <article className="container py-800">
-              <div className="row gap-150">
+          <section className="dark py-900">
+            <div className="container">
+              <div className="row gap-400">
                 <div>
-                  <h2 className='sticky-quote'>
-                    Building a better <span className='highlight-pink'>future</span> through <span className='highlight-green'>innovation</span>
-                  </h2>
-                </div>
-                <div className='d-flex flex-direction-column gap-200'>
-                  <p>
-                    In our fast-moving world, tackling tough challenges, it&#39;s essential to craft solutions that are technically sound, economically viable, and socially responsible. As a product designer, I&#39;m dedicated to innovative and sustainable problem-solving.
-                  </p>
-                  <p>
-                    Using design thinking and a user-focused approach, I aim to create products that address immediate needs while promoting long-term wellbeing. Each solution I develop has the power to make a positive impact, driving me to innovate for a sustainable future.
-                  </p>
-                  <div className='d-flex flex-direction-column gap-200'>
-                    
-                    <Position 
-                      positionName="Design Engineer" 
-                      company="DEV.F" 
-                      years="2019 - Present"
-                      tags={['product', 'edtech', 'startup', 'design', 'front end']}
-                    />
-                    <Position 
-                      positionName="Lead Product Designer" 
-                      company="homely.mx" 
-                      years="2017 - Present"
-                      tags={['product', 'ux','growth', 'services', 'social impact', 'managenent']}
-                    />
-                    <Position 
-                      positionName="CPO & Founder" 
-                      company="careme.mx" 
-                      years="2019 - 2023"
-                      tags={['venture', 'healthTech', 'product', 'growth', 'entrepreneurship']}
-                    />
-                    <Position 
-                      positionName="Product Design School Director" 
-                      company="DEV.F" 
-                      years="2016 - 2017"
-                      tags={['ux', 'ui', 'research', 'testing']}
-                    />
-                    <Position 
-                      positionName="Product Designer" 
-                      company="aliada.mx" 
-                      years="2016 - 2017"
-                      tags={['ux', 'ui', 'research', 'testing']}
-                    />
-                    <Position 
-                      positionName="Junior Product Designer" 
-                      company="Red Wolf Innovation" 
-                      years="2018 - Present"
-                      tags={['UI/UX', 'Product Design', 'Creative']}
-                    />
-                    <Position 
-                      positionName="Web Developer" 
-                      company="CONDUSEF" 
-                      years="2014 - 2015"
-                      tags={['UI/UX', 'Product Design', 'Creative']}
-                    />
-                    <Position 
-                      positionName="Software Developer" 
-                      company="Freelance" 
-                      years="2010 - 2014"
-                      tags={['UI/UX', 'Product Design', 'Creative']}
-                    />
+                  <div className="sticky-quote">
+                    <h3>What do I do?</h3>
+                    <p>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium blanditiis maiores beatae dolor. Excepturi ut nostrum, expedita repudiandae tempore tenetur obcaecati, quas eveniet neque facere, nulla ipsam cumque sequi ullam.
+                    </p>
                   </div>
                 </div>
+                <div className='d-flex flex-direction-column gap-300'>
+                  <h3>My experience</h3>
+                  <Position 
+                    positionName="Design Engineer" 
+                    company="DEV.F" 
+                    years="2019 - Present"
+                    tags={['product', 'edtech', 'startup', 'design', 'front end']}
+                  />
+                  <Position 
+                    positionName="Design Engineer" 
+                    company="DEV.F" 
+                    years="2019 - Present"
+                    tags={['product', 'edtech', 'startup', 'design', 'front end']}
+                  />
+                  <Position 
+                    positionName="Design Engineer" 
+                    company="DEV.F" 
+                    years="2019 - Present"
+                    tags={['product', 'edtech', 'startup', 'design', 'front end']}
+                  />
+                  <Position 
+                    positionName="Design Engineer" 
+                    company="DEV.F" 
+                    years="2019 - Present"
+                    tags={['product', 'edtech', 'startup', 'design', 'front end']}
+                  />
+                  <Position 
+                    positionName="Design Engineer" 
+                    company="DEV.F" 
+                    years="2019 - Present"
+                    tags={['product', 'edtech', 'startup', 'design', 'front end']}
+                  />
+                  <Position 
+                    positionName="Design Engineer" 
+                    company="DEV.F" 
+                    years="2019 - Present"
+                    tags={['product', 'edtech', 'startup', 'design', 'front end']}
+                  />
+                  <Position 
+                    positionName="Design Engineer" 
+                    company="DEV.F" 
+                    years="2019 - Present"
+                    tags={['product', 'edtech', 'startup', 'design', 'front end']}
+                  />
+                </div>
               </div>
-              
-            </article>
+            </div>
+          </section>
+            
+          <section>
             <div id="projects"></div>
             <div id="case-studies" className='container d-flex flex-direction-column gap-500 py-800'>
               <div className='d-flex flex-direction-column gap-025'>
                 <h6 className="sans">Case Studies</h6>
-                <h2>Sweet dreams (Are made in here)</h2>
+                <h2>Sweet dreams (Are made of this)</h2>
                 <p>
                   The projects featured here illustrate my approach to overcoming challenges, my commitment to functional aesthetics, and my continuous pursuit of pushing the boundaries of what is possible in product design.
                 </p>

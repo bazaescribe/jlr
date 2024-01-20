@@ -75,15 +75,12 @@ const Herotwo = () => {
 
 
   return (
-    <section className="hero">
+    <header>
       <div className="blob"></div>
-      {/*  */}
-      <div className="hero-content">
-        <div className="container d-flex flex-direction-column justify-content-center gap-150">
-          <div>
-            <h5 className="sans">José Luis Rosas Baza</h5>
-            <h1 className="text-bold">product, strategy and innovation</h1>
-          </div>
+      <div id="wrapper">
+        <div className="container">
+          <p className="bold">José Luis Rosas Baza</p>
+          <h1 className="text-bold">Product, strategy and innovation</h1>
           <div id="menu">
             <Link href="#mailto:jlrosasb@gmail.com">
               <h4 className="menu-item">jlrosasb@gmail.com</h4>
@@ -103,7 +100,7 @@ const Herotwo = () => {
           </div>
         </div>
       </div>
-    </section>
+    </header>
   );
 }
 

@@ -13,7 +13,7 @@ export default function DevF() {
 
   return (
     <>
-      <Navbar className="dark"></Navbar>
+      <Navbar></Navbar>
 
       <header className='dark future'>
         <div className="title">
@@ -62,49 +62,49 @@ export default function DevF() {
             DEV.F, a technological training company in Latin America, began its operations in 2015, offering in-person software development courses in Mexico City. Over time, the company expanded within the countrty and lately all across Latin America.
           </h4>
         </article>
-        <article className="container">
-          <div className="row gap-500">
-            <div className='d-flex flex-direction-column gap-200'>
-              <h3>So... what&#39;s up?</h3>
-              <p>
-                During the pandemic, dev.f&#39;s transition to online courses brought about exponential growth, leveraging the benefits of flexibility and reduced operational costs.
-              </p>
-              <p>
-                However, this shift presented significant challenges, including the difficulty of creating interpersonal relationships that foster professional development and the need to maintain consistent educational quality despite the expansion and the incorporation of new instructors.
-              </p>
-              <div className='d-flex flex-direction-column gap-400'>
-                <div>
-                  <h2>Since 2016</h2>
-                  <p>
-                    re shapping the way people learn about technology
-                  </p>
-                </div>
-                <div>
-                  <h2>15,000 students</h2>
-                  <p>
-                    enroled in Mexico, Latin America and the US.
-                  </p>
-                </div>
-                <div>
-                  <h2>125x net growth</h2>
-                  <p>
-                    from 120 students in 2017 to over 15,000 in 2023
-                  </p>
-                </div>
-                <div>
-                  <h2>+600 new students</h2>
-                  <p>
-                    every month
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div className='sticky-quote d-flex flex-direction-column gap-050'>
+
+        <article>
+          <div className="container">
+            <div className="row gap-100">
+              <div>
                 <div className='full-width-image-container' style={{ height: '600px'}}>
                   <Image src='/photos/devf-teacher.png' width='590' height='701' alt='teaching kids in devf'></Image>
                 </div>
-                <p className="small text-secondary-light">Fotografia propiedad de dev.f</p>
+              </div>
+
+              <div className='d-flex flex-direction-column gap-100'>
+                <div className="row gap-100">
+                  <div className='card text-align-center'>
+                    <p>since</p>
+                    <h4>2016</h4>
+                    <p>changing the world</p>
+                  </div>
+                  <div className='card text-align-center'>
+                    <p>over</p>
+                    <h4>13,000</h4>
+                    <p>students</p>
+                  </div>
+                </div>
+                <div className="row gap-100">
+                  <div className='card text-align-center'>
+                    <h4>125x</h4>
+                    <p>net growth</p>
+                  </div>
+                  <div className='card text-align-center'>
+                    <h4>+100k</h4>
+                    <p>hours of content created</p>
+                  </div>
+                </div>
+                <div className="row gap-100">
+                  <div className='card text-align-center'>
+                    <h4>3 million</h4>
+                    <p>hours of classes</p>
+                  </div>
+                  <div className='card text-align-center'>
+                    <h4>+30</h4>
+                    <p>countries</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -233,6 +233,34 @@ export default function DevF() {
               <div className='full-width-image-container' style={{ height: '450px', background: 'white'}}>
                 <Image src='/photos/component-2.png' width='1200' height='466' alt='colección de botones como componentes'></Image>
               </div>
+            </div>
+          </div>
+          <div className="row gap-500">
+            <div className='video-container'>
+              <video width="320" height="240" autoPlay loop muted>
+                <source src="/video/cta.mov" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div className='video-container'>
+              <video width="320" height="240" autoPlay loop muted>
+                <source src="/video/switch.mov" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div className="row gap-500">
+            <div className='video-container'>
+              <video width="320" height="240" autoPlay loop muted>
+                <source src="/video/tool.mov" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div className='video-container'>
+              <video width="320" height="240" autoPlay loop muted>
+                <source src="/video/led.mov" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </article>

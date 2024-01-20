@@ -1,14 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Tinos:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100;300;400;700&family=Gloock&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100;300;400;700&family=Gilda+Display&family=Gloock&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100;300;400;700&family=Gilda+Display&family=Gloock&family=Playfair:opsz,wght@5..1200,400;5..1200,700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;800&family=Playfair+Display:wght@400;600;900&display=swap');
 
 /* ==================================== index ====================================
   Imports
@@ -124,7 +115,7 @@
   --color-neutral-500: #2D2F41;
   --color-neutral-600: #1B1D33;
   --color-neutral-700: #0D1026;
-  --color-neutral-800: #05071A;
+  --color-neutral-800: #111111;
   --color-neutral-900: #00010D;
 
   /* Transparent light */
@@ -336,9 +327,13 @@ body {
 /* Header text setup */
 h1, h2, h3, h4, h5, h6 {
   margin: 0px;
-  font-family: 'Playfair', serif;
+  font-family: 'Playfair Display', serif;
   word-wrap: break-word;
   font-weight: 600;
+}
+
+h1 {
+  font-weight: 900;
 }
 
 p {
@@ -915,46 +910,16 @@ a {
   color: var(--color-neutral-100);
 }
 
-/* Tools */
-
-.btn.tool{
-  padding: var(--base-size-050) var(--base-size-100);
-  font-size: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.light .btn.tool{
-  background: var(--color-transparent-dark-10);
-  color: var(--color-neutral-900);
-  padding: var(--base-size-050) var(--base-size-100);
-}
-
-.dark .btn.tool{
-  background: var(--color-transparent-light-10);
-  color: var(--color-neutral-100);
-  padding: var(--base-size-050) var(--base-size-100);
-}
-
-.light .btn.tool:hover{
-  background: var(--color-transparent-dark-20);
-}
-
-.dark .btn.tool:hover{
-  background: var(--color-transparent-light-20);
-}
-
-.btn.menu {
-  background-color: var(--color-neutral-alpha-light-20);
-  border: 1px solid var(--color-neutral-alpha-light-10);
-  padding-top: 4px;
-  padding-bottom: 4px;
-  display: flex;
-  align-items: center;
-  height: 32px;
+.btn {
+  background: black;
+  padding: var(--base-size-075) var(--base-size-100);
+  border: 1px solid transparent;
   color: white;
+  border: 1px solid white ;
+  transition: 250ms ease all;
+  font-size: var(--base-size-075);
 }
+
 
 .action {
   display: flex;
@@ -1210,13 +1175,6 @@ visual aesthetics on your website or application. */
 
 /* ==================================== sections ==================================== */
 /* SECTION DESCRIPTION HERE */
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-}
 
 .container {
   width: 90%;
@@ -1349,13 +1307,6 @@ footer .social a {
 /* ==================================== sections ==================================== */
 /* SECTION DESCRIPTION HERE */
 
-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  box-sizing: border-box;
-}
 .container {
   width: 85%;
   max-width: 1280px;
@@ -1389,12 +1340,11 @@ header {
 /* This classes let you build basic cards, you can use them in conjuction with the Basic Styles classes to personalize them according to their function */
 
 .card {
-  border-radius: 24px;
   border: 1px solid var(--token-border);
   background: var(--token-bg-secondary);
   overflow: hidden;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 2px 4px -4px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
   transition: 350ms ease all;
+  padding: var(--base-size-300);
 }
 
 .card:hover{
@@ -1530,10 +1480,6 @@ header {
   color: var(--color-brand-aux-600);
 }
 
-.brand-aux .btn.main{
-  background: var(--color-brand-aux-400);
-  color: var(--color-brand-aux-800);
-}
 
 /* Contextual styles */
 
@@ -1643,6 +1589,7 @@ header {
 
 .sticky { 
   position: sticky;
+  top: 80px;
 }
 
 .stretch {
@@ -2054,4 +2001,25 @@ header {
   position: absolute; /* Position the image absolutely within the div */
   top: 0;
   left: 0;
+}
+
+
+#expandingArticle {
+  width: 50%;
+  transition: width linear;
+  margin: auto 0px;
+}
+
+
+.video-container {
+  width: 100%;  /* Adjust as needed */
+  height: 500px; /* Adjust as needed */
+  position: relative;
+  overflow: hidden;
+}
+
+.video-container video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }

@@ -9,19 +9,19 @@ export default function Project({ client, title }: { client: string, title: stri
 
   return (
     <Link href={`./projects/${encodeURIComponent(client)}`}>
-      <div className='project'>
+      <div className='project d-flex flex-direction-column gap-100'>
         <div className='project-cover'>
           <div className='full-width-image-container' style={{ height: '480px' }}>
             <Image src={imagePath} alt={`${client} cover image`} width='1200' height='480'></Image>
           </div>
         </div>
         <div className="project-info">
-          <h4>
+          <h6 className='sans'>
             {client}
-          </h4>
-          <p>
+          </h6>
+          <h4>
             {title}
-          </p>
+          </h4>
         </div>
       </div>
     </Link>
