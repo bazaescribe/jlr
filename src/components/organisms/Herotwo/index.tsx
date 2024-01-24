@@ -94,7 +94,7 @@ const Herotwo = () => {
             <Link href="https://twitter.com/jlrosasb" target="blank">
             <h4 className="menu-item">x/twitter</h4>
             </Link>
-            <Link href="https://drive.google.com/file/d/1iyRXeN1S7YI29ExlXSxuPcPr9lTcAvEw/view?usp=sharing" target="blank">
+            <Link href="https://drive.google.com/file/d/1o0_JwWoaI4FKoLlviWyoIIWzfIubzxPi/view?usp=sharing" target="blank">
               <h4 className="menu-item">resume</h4>
             </Link>
           </div>
