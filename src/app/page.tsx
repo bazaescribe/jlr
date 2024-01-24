@@ -71,10 +71,13 @@ export default function Home() {
             <div className="container">
               <div className="row gap-400">
                 <div>
-                  <div className="sticky-quote">
+                  <div className="sticky-quote d-flex flex-direction-column gap-100">
                     <h3>What do I do?</h3>
                     <p>
-                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium blanditiis maiores beatae dolor. Excepturi ut nostrum, expedita repudiandae tempore tenetur obcaecati, quas eveniet neque facere, nulla ipsam cumque sequi ullam.
+                      I began coding at the young age of 10, quickly developing a fascination with the way we interact with technology. My diverse experience, ranging from government projects to early-stage startups, has honed my ability to design and deliver software that is not only beautiful but also highly functional.
+                    </p>
+                    <p>
+                      I am driven by a desire to improve the lives of those who use the products I create, striving to make a positive impact on the people who place their trust in my work.
                     </p>
                   </div>
                 </div>
@@ -83,44 +86,44 @@ export default function Home() {
                   <Position 
                     positionName="Design Engineer" 
                     company="DEV.F" 
-                    years="2019 - Present"
-                    tags={['product', 'edtech', 'startup', 'design', 'front end']}
+                    years="2020 - Present"
+                    description="Lead design for multiple products, I bridge design and development to ensure successful deliverables."
                   />
                   <Position 
-                    positionName="Design Engineer" 
-                    company="DEV.F" 
-                    years="2019 - Present"
-                    tags={['product', 'edtech', 'startup', 'design', 'front end']}
+                    positionName="Head of Product" 
+                    company="Homely" 
+                    years="2017 - Present"
+                    description="Oversaw product design initiatives, enhancing user experience and interface design."
                   />
                   <Position 
-                    positionName="Design Engineer" 
-                    company="DEV.F" 
-                    years="2019 - Present"
-                    tags={['product', 'edtech', 'startup', 'design', 'front end']}
+                    positionName="CPO and Founder" 
+                    company="Care Me" 
+                    years="2019 - 2023"
+                    description="Directed product vision and strategy, leading the company&#39;s growth and innovation."
                   />
                   <Position 
-                    positionName="Design Engineer" 
+                    positionName="Design School Director and Teacher" 
                     company="DEV.F" 
-                    years="2019 - Present"
-                    tags={['product', 'edtech', 'startup', 'design', 'front end']}
+                    years="2017 - 2023"
+                    description="Led educational programs and instructed design courses, fostering student growth and creativity."
                   />
                   <Position 
-                    positionName="Design Engineer" 
-                    company="DEV.F" 
-                    years="2019 - Present"
-                    tags={['product', 'edtech', 'startup', 'design', 'front end']}
+                    positionName="Product Designer" 
+                    company="Aliada" 
+                    years="2016 - 2017"
+                    description="Focused on user-centric design solutions, improving product usability and aesthetics."
                   />
                   <Position 
-                    positionName="Design Engineer" 
-                    company="DEV.F" 
-                    years="2019 - Present"
-                    tags={['product', 'edtech', 'startup', 'design', 'front end']}
+                    positionName="Mobile Developer" 
+                    company="Red Wolf Innovation" 
+                    years="2015 - 2016"
+                    description="Developed and optimized mobile applications, enhancing user engagement and functionality."
                   />
                   <Position 
-                    positionName="Design Engineer" 
-                    company="DEV.F" 
-                    years="2019 - Present"
-                    tags={['product', 'edtech', 'startup', 'design', 'front end']}
+                    positionName="Web Developer" 
+                    company="CONDUSEF" 
+                    years="2014"
+                    description="Developed and maintained web solutions, enhancing user experience and functionality."
                   />
                 </div>
               </div>

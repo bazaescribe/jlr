@@ -141,7 +141,7 @@
   --color-neutral-solid-50: #7689a2;
   --color-neutral-solid-60: #48566a;
   --color-neutral-solid-70: #343e4c;
-  --color-neutral-solid-80: #1f262d;
+  --color-neutral-solid-80: #222222;
   --color-neutral-solid-90: #0a0d0f;
   --color-neutral-solid-100: #000000;
 
@@ -294,7 +294,7 @@
 }
 
 ::selection {
-  background-color: #ee00ff; /* set the background color of the selected text */
+  background-color: #fbc5ff; /* set the background color of the selected text */
   color: #000; /* set the text color of the selected text */
   text-shadow: none; /* remove any text shadow on the selected text */
 }
@@ -921,31 +921,6 @@ a {
 }
 
 
-.action {
-  display: flex;
-  justify-content: space-between;
-  padding: var(--base-size-16);
-  color: var(--color-neutral-solid-00);
-  text-decoration: none;
-}
-
-.btn.shortcut {
-  background: var(--token-btn-secondary-bg);
-  display: flex;
-  gap: var(--base-size-075);
-  flex-direction: column !important;
-  padding: var(--base-size-075);
-  align-items: start;
-  text-transform: none;
-  font-weight: 400;
-  font-size: 14px;
-}
-
-.btn.shortcut:hover {
-  background: var(--token-btn-secondary-hover); /* Change the color as needed */
-}
-
-
 /* ==================================== themes ==================================== */
 /* These classes are helpful for creating consistent and customizable themes for your elements, 
 making it easier to switch between light and dark themes or apply variations within each theme. 
@@ -1344,7 +1319,6 @@ footer .social a {
   background: var(--token-bg-secondary);
   overflow: hidden;
   transition: 350ms ease all;
-  padding: var(--base-size-300);
 }
 
 .card:hover{
@@ -1977,12 +1951,22 @@ footer .social a {
   filter: invert();
 }
 
+@keyframes moveBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 150%;
+  }
+}
 
 .full-width-image-container, .contain-image-container {
   display: block; /* Ensures the div takes up the full width available */
   width: 100%; /* Sets the width of the div to 100% of its parent */
   height: auto; /* Adjusts the height automatically based on the content */
   position: relative; /* Position relative to allow absolute positioning of images */
+  background: linear-gradient(to left, rgb(75, 75, 75), rgb(36, 36, 36));
+  animation: moveBackground 10s linear infinite; /* Apply the animation */
 }
 
 .full-width-image-container img {
@@ -2003,11 +1987,28 @@ footer .social a {
   left: 0;
 }
 
+.image-wrapper {
+  background: rgba(255, 255, 255, 0.3);
+  line-height: 0px;
+  width: 100%;
+}
 
 #expandingArticle {
   width: 50%;
   transition: width linear;
   margin: auto 0px;
+}
+
+.visual {
+  display: flex;
+  flex-direction: column;
+  gap: var(--base-size-100);
+}
+
+.visual p {
+  font-size: var(--base-size-075);
+  color: var(--color-transparent-light-60);
+  font-style: italic;
 }
 
 
@@ -2022,4 +2023,53 @@ footer .social a {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.bento-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* Three columns */
+  grid-template-rows: repeat(3, 1fr); /* Three rows */
+  gap: var(--base-size-100);
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.compartment {
+  background-color: var(--color-neutral-solid-80);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: var(--base-size-300) var(--base-size-100);
+  gap: 0px;
+  text-align: center;
+}
+
+.compartment-photo {
+  grid-column: 2; /* Spanning the entire middle column */
+  grid-row: 1 / 4; /* Spanning all three rows */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  padding: 0px;
+}
+
+.compartment-medium {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+/* Adjust for small screens, e.g., mobile phones */
+@media (max-width: 600px) {
+  .bento-box {
+    grid-template-columns: 1fr; /* One column */
+    grid-template-rows: auto auto auto auto auto auto auto; /* Set each row to auto */
+  }
+
+  .compartment-photo {
+    grid-column: 1; /* Adjust for single column layout */
+    grid-row: 4; /* Position the photo compartment */
+  }
+
+  /* Additional adjustments for other compartments if necessary */
 }
