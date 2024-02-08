@@ -19,7 +19,7 @@ const Position = ({ positionName, company, years, description }: { positionName:
           <p className="caption">{description}</p>
         </div>
         <div className="d-flex gap-050">
-          <p className="small text-secondary">{company}</p>
+          <p className="small text-secondary-light">{company}</p>
           <p className="small text-secondary">{years}</p>
         </div>
         {/* <div className="d-flex gap-050 flex-wrap">

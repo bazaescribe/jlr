@@ -2,19 +2,99 @@ a {
   color: black;
 }
 
-.full-width-image-container {
-  overflow: hidden;
-}
-
-.full-width-image-container img {
-  transition: 250ms ease all;
-}
-
 .project {
   cursor: pointer;
 }
 
-.project:hover img {
-  scale: 1.1;
-  transition: 250ms ease all;
+.project .cover img {
+  line-height: 0px;
+}
+
+.cover img, .cover Image {
+  display: block;
+  transition: 1s ease all;
+}
+
+
+.project .title {
+  position: relative; /* Ensure this is set to create a positioning context */
+  padding: var(--base-size-150);
+  padding-left: 0px;
+  transition: 1s ease all;
+  background: none;
+  z-index: 2;
+}
+
+.project:hover .title {
+  color: white;
+  padding-left: 24px;
+}
+
+
+.project .title::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: black;
+  transition: width 0.5s ease; /* Customize as needed */
+  z-index: -1;
+}
+
+.project:hover .title::before {
+  width: 100%;
+}
+
+
+.cover {
+  position: relative;
+  overflow: hidden; /* Keeps everything neatly contained */
+}
+
+.cover-bg {
+  /* No changes needed here; it dictates container height */
+}
+
+.cover-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80%; /* Sets the width to 80% of the .cover container */
+  transform: translate(-50%, -50%); /* Centers the div */
+  z-index: 2; /* Ensures it's above the .cover-bg */
+  /* Optionally, adjust the height as well, e.g., height: auto; for maintaining aspect ratio */
+  padding: 6px;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.20) 0%, rgba(97, 97, 97, 0.10) 49%, rgba(255, 255, 255, 0.50) 100%);
+  box-shadow: 0px 16px 48px -16px rgba(0, 0, 0, 0.32);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(64px);
+  box-shadow: 0px 20px 48px -24px rgba(0, 0, 0, 0.24);
+}
+
+.cover-window img {
+  /* nothing to see here yet */
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.32);
+}
+
+/* Responsive Image Centering */
+.cover img, .cover Image {
+  display: block;
+  width: 100%; /* Full width of parent */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.project:hover .cover-bg img {
+  transform: scale(1.1);
+  transition: 1s ease all;
+}
+
+@media screen and (max-width: 700px) {
+  .cover-window {
+    padding: 2px;
+  }
+  
 }

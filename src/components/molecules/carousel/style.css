@@ -38,6 +38,7 @@
   display: flex;
   gap: 48px;
   position: relative;
+  width: 100%;
 }
 
 .logos-slide {

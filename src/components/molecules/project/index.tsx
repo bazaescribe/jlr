@@ -9,7 +9,7 @@ export default function Project({ client, title }: { client: string, title: stri
 
   return (
     <Link href={`./projects/${encodeURIComponent(client)}`}>
-      <div className='project d-flex flex-direction-column gap-100'>
+      {/* <div className='project d-flex gap-100'>
         <div className='project-cover'>
           <div className='full-width-image-container' style={{ height: '480px' }}>
             <Image src={imagePath} alt={`${client} cover image`} width='1200' height='480'></Image>
@@ -22,6 +22,21 @@ export default function Project({ client, title }: { client: string, title: stri
           <h4>
             {title}
           </h4>
+        </div>
+      </div> */}
+      <div className='project'>
+        <div className="cover">
+          {/* <Image src={imagePath} width='1200' height='720' alt="this is the description" layout='responsive'/> */}
+          <div className="cover-bg">
+            <Image src='/projects/devf/cover-bg.png' width='1200' height='720' alt="this is the description" layout='responsive'/> 
+          </div>
+          <div className="cover-window">
+            <Image src='/projects/devf/cover-window.png' width='800' height='500' alt="this is the description" layout='responsive'/> 
+          </div>
+        </div>
+        <div className='title'>
+          <p>{client}</p>
+          <h6>{title}</h6>
         </div>
       </div>
     </Link>

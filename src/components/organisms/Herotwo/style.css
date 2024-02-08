@@ -4,8 +4,8 @@ header {
   overflow: hidden !important; 
   background-color: #ffffff;
   opacity: 1;
-  background-image: radial-gradient(#ceced0 0.8px, #ffffff 0.8px);
-  background-size: 16px 16px;
+  background-image: radial-gradient(#a7a7a7 0.8px, #ffffff 0.8px);
+  background-size: 24px 24px;
   width: 100%;
   animation: slideBackground 1s linear infinite; /* Apply the animation */
 
@@ -16,7 +16,7 @@ header {
     background-position: 0 0;
   }
   to {
-    background-position: 0 -16px; /* Shift the background down by the size of one tile */
+    background-position: 0 -24px; /* Shift the background down by the size of one tile */
   }
 }
 
@@ -24,8 +24,14 @@ header #wrapper {
   position: relative;
   background: linear-gradient(rgba(255, 255, 255, 0), white 70%);
   width: 100%;
-  padding: var(--base-size-1000) 0px;
+  padding: 200px 0px;
   z-index: 200;
+}
+
+@media screen and (max-width: 600px) {
+  header #wrapper {
+    padding: 160px 0px;
+  }
 }
 
 #menu {

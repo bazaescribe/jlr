@@ -59,30 +59,24 @@ export default function Home() {
           <Herotwo></Herotwo>
 
           <section className='d-flex flex-direction-column justify-content-center align-items-center'>
-            <article className="dark py-900 text-align-center" id="expandingArticle">
+            <article className="dark py-2000 text-align-center" id="expandingArticle">
               <div data-aos="fade-up" className="container">
-                <h2>Can&#39;t stop <br /> rock & roll</h2>
-                <p className="caption">building beautiful software for quite a while</p>
+                <h1>Can&#39;t stop <br /> rock & roll</h1>
               </div>
             </article>
           </section>
 
-          <section className="dark py-900">
-            <div className="container">
+          <section className="dark pb-1500">
+            <div className="container d-flex flex-direction-column gap-1500">
               <div className="row gap-400">
                 <div>
                   <div className="sticky-quote d-flex flex-direction-column gap-100">
-                    <h3>What do I do?</h3>
-                    <p>
-                      I began coding at the young age of 10, quickly developing a fascination with the way we interact with technology. My diverse experience, ranging from government projects to early-stage startups, has honed my ability to design and deliver software that is not only beautiful but also highly functional.
-                    </p>
-                    <p>
-                      I am driven by a desire to improve the lives of those who use the products I create, striving to make a positive impact on the people who place their trust in my work.
-                    </p>
+                    <h3 aos-data="fade-in">
+                      I&#39;m a designer and developer based in Mexico City with experience delivering products for millions of users, and yours could be next!
+                    </h3>
                   </div>
                 </div>
-                <div className='d-flex flex-direction-column gap-300'>
-                  <h3>My experience</h3>
+                <div className='d-flex flex-direction-column gap-400'>
                   <Position 
                     positionName="Design Engineer" 
                     company="DEV.F" 
@@ -130,27 +124,34 @@ export default function Home() {
             </div>
           </section>
             
-          <section>
-            <div id="projects"></div>
-            <div id="case-studies" className='container d-flex flex-direction-column gap-500 py-800'>
-              <div className='d-flex flex-direction-column gap-025'>
-                <h6 className="sans">Case Studies</h6>
-                <h2>Sweet dreams (Are made of this)</h2>
-                <p>
-                  The projects featured here illustrate my approach to overcoming challenges, my commitment to functional aesthetics, and my continuous pursuit of pushing the boundaries of what is possible in product design.
-                </p>
-              </div>
-              
+          <section className='d-flex flex-direction-column py-1500 gap-1500'>
+            <article>
+              <div id="projects"></div>
+              <div id="case-studies" className='container d-flex flex-direction-column gap-500 '>
+                <div className='d-flex flex-direction-column gap-025'>
+                  <h6 className="sans">Case Studies</h6>
+                  <h2>Sweet dreams (Are made of this)</h2>
+                  <p>
+                    The projects featured here illustrate my approach to overcoming challenges, my commitment to functional aesthetics, and my continuous pursuit of pushing the boundaries of what is possible in product design.
+                  </p>
+                </div>
+                
 
-              <div className='row gap-100'> 
-                <Project client="devf" title="A tech education journey in Latin America" />
+                <div className='row gap-100'> 
+                  <Project client="devf" title="A tech education journey in Latin America" />
+                </div>
+                {/* <div className='row gap-500'> 
+                  <Project client="homely" title="Bringing joy to the enterprise" />
+                  <Project client="aliada" title="Making homes out of a million houses" />
+                </div> */}
               </div>
-              <div className='row gap-500'> 
-                <Project client="homely" title="Bringing joy to the enterprise" />
-                <Project client="aliada" title="Making homes out of a million houses" />
-              </div>
+            </article>
+            
+            <div className="d-flex flex-direction-column text-align-center">
+              <h5>other colaborations</h5>
+              <Carousel></Carousel>
             </div>
-            <Carousel></Carousel>
+            
           </section>
 
           <Footer></Footer>

@@ -4,6 +4,7 @@ import { link } from "fs/promises";
 import "./style.css"
 import Link from 'next/link'
 import { useEffect } from "react";
+import Image from "next/image";
 
 const Herotwo = () => {
   useEffect(() => {
@@ -78,10 +79,39 @@ const Herotwo = () => {
     <header>
       <div className="blob"></div>
       <div id="wrapper">
-        <div className="container">
-          <p className="bold">José Luis Rosas Baza</p>
-          <h1 className="text-bold">Product, strategy and innovation</h1>
-          <div id="menu">
+        <div className="container d-flex flex-direction-column gap-200">
+          <div className="d-flex flex-direction-column">
+            <h6>
+              José Luis Rosas Baza
+            </h6>
+            <h1 className="text-bold">
+              Turning visionary ideas into success
+            </h1>
+          </div>
+          
+          <div className="d-flex gap-100">
+            <Link href="https://drive.google.com/file/d/1o0_JwWoaI4FKoLlviWyoIIWzfIubzxPi/view?usp=sharing" target="blank">
+              <p className="btn secondary">my resume</p>
+            </Link>
+            <Link href="mailto:jlrosasb@gmail.com">
+              <p className="btn main">let&#39;s connect</p>
+            </Link>
+          </div>
+          <p>
+            or you can give me a call and find me in my socials
+          </p>
+          <div className="d-flex gap-100">
+            <Link href="https://twitter.com/jlrosasb" target="blank">
+              <Image src="/icons/x.png" width='20' height='20' alt="x formerly twitter"/>
+            </Link>
+            <Link href="https://www.linkedin.com/in/jlrosasb/">
+              <Image src="/icons/linkedin.png" width='20' height='20' alt="linkedin"/>
+            </Link>
+          </div>
+          {/* <p className="small">
+            Hablemos español 🇲🇽
+          </p> */}
+          {/* <div id="menu">
             <Link href="mailto:jlrosasb@gmail.com">
               <h4 className="menu-item">jlrosasb@gmail.com</h4>
             </Link>
@@ -97,7 +127,7 @@ const Herotwo = () => {
             <Link href="https://drive.google.com/file/d/1o0_JwWoaI4FKoLlviWyoIIWzfIubzxPi/view?usp=sharing" target="blank">
               <h4 className="menu-item">resume</h4>
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </header>

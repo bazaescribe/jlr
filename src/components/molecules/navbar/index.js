@@ -17,7 +17,7 @@ const Navbar = ({ className = '' }) => {
           </div>
         </Link>
         <div className="menu">
-          <Link href="https://wa.me/525516777083?text=Hey%20Jose%20Luis%2C%20let's%20work%20together" className='btn'>
+          <Link href="https://wa.me/525516777083?text=Hey%20Jose%20Luis%2C%20let's%20work%20together" className='btn main'>
             let&#39;s connect
           </Link>
         </div>
