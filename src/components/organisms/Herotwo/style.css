@@ -3,12 +3,12 @@ header {
   position: relative;
   overflow: hidden !important; 
   background-color: #ffffff;
+  min-height: 100vh;
   opacity: 1;
-  background-image: radial-gradient(#a7a7a7 0.8px, #ffffff 0.8px);
+  background-image: radial-gradient(#d0d0d0 0.8px, #ffffff 0.8px);
   background-size: 24px 24px;
   width: 100%;
-  animation: slideBackground 1s linear infinite; /* Apply the animation */
-
+  animation: slideBackground 2s linear infinite; /* Apply the animation */
 }
 
 @keyframes slideBackground {
@@ -22,10 +22,10 @@ header {
 
 header #wrapper {
   position: relative;
-  background: linear-gradient(rgba(255, 255, 255, 0), white 70%);
   width: 100%;
   padding: 200px 0px;
   z-index: 200;
+  margin: auto auto;
 }
 
 @media screen and (max-width: 600px) {

@@ -1,0 +1,25 @@
+.scroll-wrapper {
+  height: 500vh;
+}
+
+.sticky-parent {
+  height: 100vh;
+  position: sticky;
+  top: 0px;
+  display: flex;
+  align-items: center;
+}
+
+.scrolleable-block {
+  background: rgba(255, 0, 255, 0.5);
+  width: 500vw;
+  display: flex;
+  justify-content: space-between;
+  will-change: transform;
+}
+
+.element {
+  background: blue;
+  height: 100%;
+  width: 800px;
+}

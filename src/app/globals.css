@@ -328,12 +328,12 @@ body {
 /* Header text setup */
 h1, h2, h3, h4, h5, h6 {
   margin: 0px;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Inter', sans-serif;
   word-wrap: break-word;
   font-weight: 600;
 }
 
-h1 {
+h1, h2, h3 {
   font-weight: 900;
 }
 
@@ -345,12 +345,12 @@ p {
 .sans { font-family: 'Inter', sans-serif; }
 
 /* header sizing */
-h1 { font-size: 8rem; font-weight: 400; }
-h2 { font-size: 6em; font-weight: 400; }
-h3 { font-size: 4rem; font-weight: 400; }
-h4 { font-size: 3rem; font-weight: 400; }
-h5 { font-size: 2rem; font-weight: 400; }
-h6 { font-size: 1.5rem; font-weight: 400; }
+h1 { font-size: 8rem; font-weight: 900; }
+h2 { font-size: 6em; font-weight: 900; }
+h3 { font-size: 4rem; font-weight: 9 00; }
+h4 { font-size: 3rem; font-weight: 900; }
+h5 { font-size: 2rem; font-weight: 900; }
+h6 { font-size: 1.5rem; font-weight: 900; }
 
 /* header sizing for mobile */
 @media (max-width: 768px) {
@@ -918,16 +918,23 @@ a {
 }
 
 .btn {
-  border: 1px solid transparent;
-  color: white;
-  padding: 1rem;
-  border: 1px solid white ;
+  border: 1px solid black;
+  border-radius: 4px;
+  color: black;
+  padding: 0.5rem 1rem;
   transition: 250ms ease all;
-  font-size: 14px;
+  font-size: 12px;
+  text-transform: uppercase;
+  box-shadow: 2px 2px 0px black;
+  background: white;
+}
+
+.btn:hover {
+  box-shadow: 4px 4px 0px black;
 }
 
 .btn.main { 
-  background: black;
+  background: #D7FF35;
 }
 
 .btn.secondary {
@@ -2087,4 +2094,24 @@ footer .social a {
   }
 
   /* Additional adjustments for other compartments if necessary */
+}
+
+
+.zigzag {
+  
+}
+
+
+.zigzag::after {
+  background: linear-gradient(-135deg, #000 16px, transparent 0), linear-gradient(135deg, #000 16px, transparent 0);
+  background-position: left-bottom;
+  background-repeat: repeat-x;
+  background-size: 32px 32px;
+  content: " ";
+  display: block;
+  position: relative;
+  bottom: -270px;
+  left: 0px;
+  width: 100%;
+  height: 32px;
 }

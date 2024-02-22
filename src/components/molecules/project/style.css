@@ -26,7 +26,6 @@ a {
 }
 
 .project:hover .title {
-  color: white;
   padding-left: 24px;
 }
 
@@ -38,7 +37,7 @@ a {
   left: 0;
   width: 0%;
   height: 100%;
-  background-color: black;
+  background-color: #D7FF35;
   transition: width 0.5s ease; /* Customize as needed */
   z-index: -1;
 }

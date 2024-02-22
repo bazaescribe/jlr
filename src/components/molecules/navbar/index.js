@@ -7,7 +7,7 @@ const Navbar = ({ className = '' }) => {
   return (
     <nav className={className}>
       <div className="container">
-        <Link href="/">
+        {/* <Link href="/">
           <div className="home">
             <div className="blob-1"></div>
             <div className="blob-2"></div>
@@ -15,6 +15,9 @@ const Navbar = ({ className = '' }) => {
             <div className="lens"></div>
             <Logo></Logo>
           </div>
+        </Link> */}
+        <Link href="/">
+          <Image src="/emoji.png" width='64' height='64' alt='Memoji José Luis Rosas Baza'></Image>
         </Link>
         <div className="menu">
           <Link href="https://wa.me/525516777083?text=Hey%20Jose%20Luis%2C%20let's%20work%20together" className='btn main'>

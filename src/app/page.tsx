@@ -8,11 +8,13 @@ import Link from 'next/link'
 import Position from '@/components/molecules/position';
 import Footer from '@/components/organisms/footer';
 import Project from '@/components/molecules/project';
+import HorizontalScroll from '@/components/organisms/horizontalScroll';
 import AOS from 'aos';
 import 'aos/dist/aos.css'
 import ProjectSlide from '@/components/organisms/ProjectSlide';
 import Herotwo from '@/components/organisms/Herotwo'
 import Carousel from '@/components/molecules/carousel';
+import "./page.module.css"
 
 export default function Home() {
   useEffect(() => {
@@ -53,8 +55,9 @@ export default function Home() {
   
   return (
     <>
-      <main>
       <Navbar />
+      <main>
+      
         <div className="">
           <Herotwo></Herotwo>
 
@@ -66,17 +69,18 @@ export default function Home() {
             </article>
           </section>
 
-          <section className="dark pb-1500">
-            <div className="container d-flex flex-direction-column gap-1500">
+          <section className="dark pb-1500 zigzag" id="black-section">
+            <div className="container d-flex flex-direction-column gap-1500 ">
               <div className="row gap-400">
                 <div>
                   <div className="sticky-quote d-flex flex-direction-column gap-100">
-                    <h3 aos-data="fade-in">
-                      I&#39;m a designer and developer based in Mexico City with experience delivering products for millions of users, and yours could be next!
-                    </h3>
+                    <Image src='/photos/mock-image.png' width='560' height='469' alt='photo examples' layout='responsive'></Image>
                   </div>
                 </div>
                 <div className='d-flex flex-direction-column gap-400'>
+                  <h4 aos-data="fade-in">
+                    I&#39;m a designer and developer based in Mexico City with experience delivering products for millions of users, and yours could be next!
+                  </h4>
                   <Position 
                     positionName="Design Engineer" 
                     company="DEV.F" 
@@ -123,8 +127,27 @@ export default function Home() {
               </div>
             </div>
           </section>
+
+          <HorizontalScroll></HorizontalScroll>
             
           <section className='d-flex flex-direction-column py-1500 gap-1500'>
+            <article>
+              <div id="case-studies" className='container d-flex flex-direction-column gap-500 '>
+                <div className='d-flex flex-direction-column gap-025'>
+                  <h6 className="sans">Case Studies</h6>
+                  <h2>Sweet dreams (Are made of this)</h2>
+                  <p>
+                    The projects featured here illustrate my approach to overcoming challenges, my commitment to functional aesthetics, and my continuous pursuit of pushing the boundaries of what is possible in product design.
+                  </p>
+                </div>
+                
+
+                <div className='row gap-100'> 
+                  <Project client="devf" title="A tech education journey in Latin America" />
+                </div>
+              </div>
+            </article>
+
             <article>
               <div id="projects"></div>
               <div id="case-studies" className='container d-flex flex-direction-column gap-500 '>
@@ -140,12 +163,10 @@ export default function Home() {
                 <div className='row gap-100'> 
                   <Project client="devf" title="A tech education journey in Latin America" />
                 </div>
-                {/* <div className='row gap-500'> 
-                  <Project client="homely" title="Bringing joy to the enterprise" />
-                  <Project client="aliada" title="Making homes out of a million houses" />
-                </div> */}
               </div>
             </article>
+
+            
             
             <div className="d-flex flex-direction-column text-align-center">
               <h5>other colaborations</h5>

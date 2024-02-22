@@ -54,22 +54,6 @@ const Herotwo = () => {
       console.log("Hello there!! 👀");
     };
 
-    // // Select all elements with the class '.menu-item'
-    // const links = document.querySelectorAll('.menu-item');
-
-    // // Add event listeners to each link
-    // links.forEach(link => {
-    //   link.addEventListener('mouseenter', handleMouseEnter);
-    //   link.addEventListener('mouseleave', handleMouseLeave);
-    // });
-
-    // // Cleanup function to remove event listeners
-    // return () => {
-    //   links.forEach(link => {
-    //     link.removeEventListener('mouseenter', handleMouseEnter);
-    //     link.removeEventListener('mouseleave', handleMouseLeave);
-    //   });
-    // };
   }, []); // Empty dependency array means this runs once after initial render
 
 
@@ -82,7 +66,7 @@ const Herotwo = () => {
         <div className="container d-flex flex-direction-column gap-200">
           <div className="d-flex flex-direction-column">
             <h6>
-              José Luis Rosas Baza
+              José Luis Rosas Baza, product designer & developer
             </h6>
             <h1 className="text-bold">
               Turning visionary ideas into success
@@ -108,26 +92,6 @@ const Herotwo = () => {
               <Image src="/icons/linkedin.png" width='20' height='20' alt="linkedin"/>
             </Link>
           </div>
-          {/* <p className="small">
-            Hablemos español 🇲🇽
-          </p> */}
-          {/* <div id="menu">
-            <Link href="mailto:jlrosasb@gmail.com">
-              <h4 className="menu-item">jlrosasb@gmail.com</h4>
-            </Link>
-            <Link href="tel:5516777083">
-              <h4 className="menu-item">+52 55 1677 7083</h4>
-            </Link>
-            <Link href="https://www.linkedin.com/in/jlrosasb" target="blank">
-            <h4 className="menu-item">linkedin</h4>
-            </Link>
-            <Link href="https://twitter.com/jlrosasb" target="blank">
-            <h4 className="menu-item">x/twitter</h4>
-            </Link>
-            <Link href="https://drive.google.com/file/d/1o0_JwWoaI4FKoLlviWyoIIWzfIubzxPi/view?usp=sharing" target="blank">
-              <h4 className="menu-item">resume</h4>
-            </Link>
-          </div> */}
         </div>
       </div>
     </header>
