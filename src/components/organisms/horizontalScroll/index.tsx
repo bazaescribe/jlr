@@ -6,8 +6,8 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const HorizontalScroll = () => {
-  const stickyRef = useRef(null);
-  const wrapperRef = useRef(null);
+  const stickyRef = useRef<HTMLDivElement>(null); // If your sticky element is a div
+  const wrapperRef = useRef<HTMLDivElement>(null); // Assuming the wrapper is also a div
   const [stickyTop, setStickyTop] = useState(0);
   const [scrollProgress, setScrollProgress] = useState(0); // New state for scroll progress
 
@@ -54,7 +54,7 @@ const HorizontalScroll = () => {
             <h6 className="sans">Concepts</h6>
             <h2>Kickstart my heart</h2>
             <p>
-              This are just some of the random ideas I create just for fun...
+              These are just some of the random ideas I create just for fun...
             </p>
           </div>
           <Image src='/concepts/cdmx.png' width='342' height='700' alt='concept' />
@@ -64,13 +64,10 @@ const HorizontalScroll = () => {
           <Image src='/concepts/sales-data.png' width='342' height='700' alt='concept' />
           <div className="element">
             <h6 className="sans">Concepts</h6>
-            <h2>Kickstart my heart</h2>
+            <h4>Cool, right?</h4>
             <p>
-              This are just some of the random ideas I create just for fun...
+              Follow me and check more ideas constanlty.
             </p>
-          </div>
-          <div className="element">
-            <h2>Hello world</h2>
           </div>
         </div>
       </div>

@@ -12,7 +12,7 @@
 }
 
 .scrolleable-block {
-  width: 500vw;
+  width: 400vw;
   display: flex;
   gap: 64px;
   justify-content: space-between;
