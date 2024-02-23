@@ -3,7 +3,8 @@
 }
 
 .sticky-parent {
-  height: 100vh;
+  min-height: 100vh;
+  padding: 120px 0px;
   position: sticky;
   top: 0px;
   display: flex;
@@ -11,15 +12,14 @@
 }
 
 .scrolleable-block {
-  background: rgba(255, 0, 255, 0.5);
   width: 500vw;
   display: flex;
+  gap: 64px;
   justify-content: space-between;
   will-change: transform;
 }
 
 .element {
-  background: blue;
   height: 100%;
   width: 800px;
 }

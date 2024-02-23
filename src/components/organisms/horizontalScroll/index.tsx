@@ -1,6 +1,8 @@
 "use client" 
 
 import "./style.css"
+import Image from "next/image";
+
 import { useEffect, useRef, useState } from "react";
 
 const HorizontalScroll = () => {
@@ -49,10 +51,23 @@ const HorizontalScroll = () => {
           style={{ transform: `translateX(-${scrollProgress}%)` }} // Apply dynamic translation based on scroll progress
         >
           <div className="element">
-            <h2>Hello world</h2>
+            <h6 className="sans">Concepts</h6>
+            <h2>Kickstart my heart</h2>
+            <p>
+              This are just some of the random ideas I create just for fun...
+            </p>
           </div>
+          <Image src='/concepts/cdmx.png' width='342' height='700' alt='concept' />
+          <Image src='/concepts/ai.png' width='342' height='700' alt='concept' />
+          <Image src='/concepts/network.png' width='342' height='700' alt='concept' />
+          <Image src='/concepts/movies.png' width='342' height='700' alt='concept' />
+          <Image src='/concepts/sales-data.png' width='342' height='700' alt='concept' />
           <div className="element">
-            <h2>Hello world</h2>
+            <h6 className="sans">Concepts</h6>
+            <h2>Kickstart my heart</h2>
+            <p>
+              This are just some of the random ideas I create just for fun...
+            </p>
           </div>
           <div className="element">
             <h2>Hello world</h2>

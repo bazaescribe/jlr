@@ -153,7 +153,7 @@ export default function Home() {
               <div id="case-studies" className='container d-flex flex-direction-column gap-500 '>
                 <div className='d-flex flex-direction-column gap-025'>
                   <h6 className="sans">Case Studies</h6>
-                  <h2>Sweet dreams (Are made of this)</h2>
+                  <h3>Sweet dreams (Are made of this)</h3>
                   <p>
                     The projects featured here illustrate my approach to overcoming challenges, my commitment to functional aesthetics, and my continuous pursuit of pushing the boundaries of what is possible in product design.
                   </p>
