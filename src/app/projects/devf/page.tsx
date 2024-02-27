@@ -30,7 +30,7 @@ export default function DevF() {
         </div>
       </header>
 
-      <section className='dark py-1000 d-flex flex-direction-column gap-1k'>
+      <section className='dark py-1000 d-flex flex-direction-column gap-1000'>
         <article className="container d-flex flex-direction-column gap-400">
 
           <div className='d-flex flex-direction-column gap-100'>
