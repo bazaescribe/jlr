@@ -14,7 +14,12 @@ import 'aos/dist/aos.css'
 import ProjectSlide from '@/components/organisms/ProjectSlide';
 import Herotwo from '@/components/organisms/Herotwo'
 import Carousel from '@/components/molecules/carousel';
+import ImageGrid from '@/components/organisms/ImageGrid';
 import "./page.module.css"
+
+import Hero from '@/components/organisms/Hero';
+import Highlights from '@/components/molecules/highlights';
+import Projects from '@/components/molecules/Projects';
 
 export default function Home() {
   useEffect(() => {
@@ -50,133 +55,121 @@ export default function Home() {
   
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-  
+
+  const highlightsData = [
+    {
+      title: 'Founder of JLR',
+      dates: 'Since 2024',
+      description: 'Providing top-notch tech consulting services focusing on product design, development, and cloud solutions.',
+    },
+    {
+      title: 'Chief Product Officer at Homely.mx',
+      dates: 'Since 2017',
+      description: 'Led the design and development of user-friendly interfaces, boosting customer engagement and satisfaction.',
+    },
+    {
+      title: 'Design Engineer at DEVF',
+      dates: 'Since 2022',
+      description: 'Empowered students with the skills and knowledge to excel in the design field, while also guiding the overall direction of the design school.',
+    },
+    {
+      title: 'Design School Director and Teacher at DEVF',
+      dates: '2017 - 2022',
+      description: 'Empowered students with the skills and knowledge to excel in the design field, while also guiding the overall direction of the design school.',
+    },
+    {
+      title: 'CPO and Founder of CareMe.mx',
+      dates: '2023 - Present',
+      description: 'Gained invaluable experience in entrepreneurship, learning the intricacies of pitching for funding, and driving a startup from concept to execution.',
+    },
+    {
+      title: 'Product Designer at Aliada.mx',
+      dates: '2017 - 2019',
+      description: 'Designed intuitive user experiences that streamlined processes and enhanced usability.',
+    }
+  ];
+
+  const projectsData = [
+    {
+      id: '1',
+      image: '/projects/thumbnails/homely.png', // Update with your actual image paths
+      title: 'Transforming a Cleaning Giant: Pivot to B2B Excellence',
+      company: 'Homely',
+    },
+    {
+      id: '2',
+      image: '/projects/thumbnails/aliada.png',
+      title: 'Revitalizing Tech Legacy: A Brand Refresh for Tomorrow',
+      company: 'Aliada',
+    },
+    {
+      id: '3',
+      image: '/projects/thumbnails/atomic.png',
+      title: 'Unified Excellence: Design System for Multi-Product Bootcamp',
+      company: 'DEV.F',
+    },
+    {
+      id: '4',
+      image: '/projects/thumbnails/careme.png',
+      title: 'Empowering Care: Kickstarting a Caregiver Revolution',
+      company: 'careme.mx',
+    },
+    {
+      id: '5',
+      image: '/projects/thumbnails/campus.png',
+      title: 'Innovate to Educate: Launching a Next-Gen Learning Platform',
+      company: 'DEV.F',
+    },
+    {
+      id: '6',
+      image: '/projects/thumbnails/promos.png',
+      title: 'Strategic Growth: Streamlining Student Acquisition for Bootcamp Success',
+      company: 'DEV.F',
+    },
+    {
+      id: '7',
+      image: '/projects/thumbnails/jlr.png',
+      title: 'My Signature Mark: Branding and Site for JLR Consulting',
+      company: 'JLR Consulting',
+    },
+  ];
   
   
   return (
     <>
       <Navbar />
-      <main>
-      
-        <div className="">
-          <Herotwo></Herotwo>
+      <main className='py-1000 container d-flex flex-direction-column gap-800'>
+       
+        <Hero></Hero>
 
-          <section className='d-flex flex-direction-column justify-content-center align-items-center'>
-            <article className="dark py-2000 text-align-center" id="expandingArticle">
-              <div data-aos="fade-up" className="container">
-                <h1>Can&#39;t stop <br /> rock & roll</h1>
-              </div>
-            </article>
-          </section>
-
-          <section className="dark pb-1500 zigzag" id="black-section">
-            <div className="container d-flex flex-direction-column gap-1500 ">
-              <div className="row gap-400">
-                <div>
-                  <div className="sticky-quote d-flex flex-direction-column gap-100">
-                    <Image src='/photos/mock-image.png' width='560' height='469' alt='photo examples' layout='responsive'></Image>
-                  </div>
-                </div>
-                <div className='d-flex flex-direction-column gap-400'>
-                  <h4 aos-data="fade-in">
-                    I&#39;m a designer and developer based in Mexico City with experience delivering products for millions of users, and yours could be next!
-                  </h4>
-                  <Position 
-                    positionName="Design Engineer" 
-                    company="DEV.F" 
-                    years="2020 - Present"
-                    description="Lead design for multiple products, I bridge design and development to ensure successful deliverables."
-                  />
-                  <Position 
-                    positionName="Head of Product" 
-                    company="Homely" 
-                    years="2017 - Present"
-                    description="Oversaw product design initiatives, enhancing user experience and interface design."
-                  />
-                  <Position 
-                    positionName="CPO and Founder" 
-                    company="Care Me" 
-                    years="2019 - 2023"
-                    description="Directed product vision and strategy, leading the company&#39;s growth and innovation."
-                  />
-                  <Position 
-                    positionName="Design School Director and Teacher" 
-                    company="DEV.F" 
-                    years="2017 - 2023"
-                    description="Led educational programs and instructed design courses, fostering student growth and creativity."
-                  />
-                  <Position 
-                    positionName="Product Designer" 
-                    company="Aliada" 
-                    years="2016 - 2017"
-                    description="Focused on user-centric design solutions, improving product usability and aesthetics."
-                  />
-                  <Position 
-                    positionName="Mobile Developer" 
-                    company="Red Wolf Innovation" 
-                    years="2015 - 2016"
-                    description="Developed and optimized mobile applications, enhancing user engagement and functionality."
-                  />
-                  <Position 
-                    positionName="Web Developer" 
-                    company="CONDUSEF" 
-                    years="2014"
-                    description="Developed and maintained web solutions, enhancing user experience and functionality."
-                  />
-                </div>
-              </div>
+        <section className='d-flex flex-direction-column gap-100'>
+          <h6>About me</h6>
+          <p className='easy'>
+            As a seasoned product designer with a robust background in web development and UX, I&#39;ve had the privilege of shaping digital experiences that delight users and achieve business goals. From teaching the next generation of designers to leading product strategy at innovative startups, my journey has been driven by a passion for design and a commitment to excellence.
+          </p>
+          <div className='d-grid grid-2-cols mt-100'>
+            <div className="image-container">
+              <Image src="/photos/aliada-con.png" height={500} width={644} alt='Conferencia de Aliadas'></Image>
             </div>
-          </section>
-
-          <HorizontalScroll></HorizontalScroll>
-            
-          <section className='d-flex flex-direction-column py-1500 gap-1500'>
-            <article>
-              <div id="case-studies" className='container d-flex flex-direction-column gap-500 '>
-                <div className='d-flex flex-direction-column gap-025'>
-                  <h6 className="sans">Case Studies</h6>
-                  <h2>Sweet dreams (Are made of this)</h2>
-                  <p>
-                    The projects featured here illustrate my approach to overcoming challenges, my commitment to functional aesthetics, and my continuous pursuit of pushing the boundaries of what is possible in product design.
-                  </p>
-                </div>
-                
-
-                <div className='row gap-100'> 
-                  <Project client="devf" title="A tech education journey in Latin America" />
-                </div>
-              </div>
-            </article>
-
-            <article>
-              <div id="projects"></div>
-              <div id="case-studies" className='container d-flex flex-direction-column gap-500 '>
-                <div className='d-flex flex-direction-column gap-025'>
-                  <h6 className="sans">Case Studies</h6>
-                  <h3>Sweet dreams (Are made of this)</h3>
-                  <p>
-                    The projects featured here illustrate my approach to overcoming challenges, my commitment to functional aesthetics, and my continuous pursuit of pushing the boundaries of what is possible in product design.
-                  </p>
-                </div>
-                
-
-                <div className='row gap-100'> 
-                  <Project client="devf" title="A tech education journey in Latin America" />
-                </div>
-              </div>
-            </article>
-
-            
-            
-            <div className="d-flex flex-direction-column text-align-center">
-              <h5>other colaborations</h5>
-              <Carousel></Carousel>
+            <div className="image-container">
+              <Image src="/photos/shark-tank.png" height={500} width={644} alt='Shark Tank Mexico'></Image>
             </div>
-            
-          </section>
+          </div>
+        </section>
 
-          <Footer></Footer>
-        </div>
+        <section className='d-flex flex-direction-column gap-150'>
+          <h6>Experience highights</h6>
+          <Highlights highlights={highlightsData} />
+        </section>
+
+        <section className='d-flex flex-direction-column gap-150'>
+          <h6>Projects</h6>
+          <p className='easy'>
+            Here are some of my higher scope projects that showcase my expertise in product design, user experience, and development. Each project highlights my commitment to creating innovative and impactful digital solutions that drive engagement and deliver results. Explore these projects to see the breadth and depth of my work across different domains.
+          </p>
+          <Projects projects={projectsData} />
+        </section>
+        
       </main>
     </>
   )

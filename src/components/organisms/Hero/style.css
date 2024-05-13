@@ -1,27 +1,14 @@
-.hero{
-  padding: var(--base-size-200) 0px;
-  min-height: 80vh;
+.hero {
   display: flex;
-  align-items: center;
-  color: white;
-  max-width: 100%;
-  background: 
-    linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%), 
-    radial-gradient(165.28% 52.66% at 97.43% 89.99%, #5F9 0%, 
-    rgba(85, 255, 183, 0.00) 100%), 
-    linear-gradient(90deg, #EB10FE 0%, #06F 100%);
-  background-size: 200%;
-  /* animation: hero-animation 4s infinite alternate; */
-  animation: hero-animation 12s ease alternate infinite;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-@keyframes hero-animation {
-  0% { background-position: 0% -50%; }
-  100% { background-position: 100% 50%; }
+.hero a {
+  color: var(--color-accent);
+  transition: 250ms ease all;
 }
 
-.hero h1{
-  line-height: 1.2;
-  letter-spacing: -4px;
-  word-wrap: break-word;
+.hero a:hover {
+  transform: translateY(-2px);
 }

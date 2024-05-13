@@ -4,31 +4,25 @@ import Link from 'next/link'
 
 const Hero = () => {
   return (
-    <section className="hero">
-      <div className="container d-flex flex-direction-column gap-150">
-        <div>
-          <h3>José Luis Rosas Baza</h3>
-          <h1 className="text-bold">product, strategy and innovation</h1>
-        </div>
-        <div>
-          <Link href="#">
-            <h4>jlrosasb@gmail.com</h4>
-          </Link>
-          <Link href="#">
-            <h4>+52 55 1677 7083</h4>
-          </Link>
-          <Link href="#">
-            <h4>linkedin</h4>
-          </Link>
-          <Link href="#">
-            <h4>x/twitter</h4>
-          </Link>
-          <Link href="#">
-            <h4>resume</h4>
-          </Link>
-        </div>
+    <header className="hero">
+      <h1>
+        José Luis Rosas Baza
+      </h1>
+      <h5>
+        Product Designer + Developer + Entrepreneur
+      </h5>
+      <div className="d-flex gap-100">
+        <Link href='https://www.linkedin.com/in/jlrosasb/'>
+          <h5>linkedin</h5>
+        </Link>
+        <Link href='https://twitter.com/jlrosasb'>
+          <h5>x</h5>
+        </Link>
+        <Link href='https://twitter.com/jlrosasb'>
+          <h5>resume</h5>
+        </Link>
       </div>
-    </section>
+    </header>
   );
 }
 
