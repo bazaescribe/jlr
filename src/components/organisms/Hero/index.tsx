@@ -16,7 +16,7 @@ const Hero = () => {
           <h5>linkedin</h5>
         </Link>
         <Link href='https://twitter.com/jlrosasb'>
-          <h5>x</h5>
+          <h5>x [twitter]</h5>
         </Link>
         <Link href='https://twitter.com/jlrosasb'>
           <h5>resume</h5>

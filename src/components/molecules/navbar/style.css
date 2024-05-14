@@ -175,3 +175,6 @@ nav.dark .home {
   color: var(--color-light);
 }
 
+button {
+  border: none;
+}

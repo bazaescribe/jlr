@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import "./style.css";
 import Logo from '@/components/atoms/logo';
+import OverlayCard from '@/components/organisms/OverlayCard';
 
 const Navbar = ({ className = '' }) => {
   // State to track if the special class should be applied
@@ -30,6 +31,8 @@ const Navbar = ({ className = '' }) => {
   // Use the `scrolled` state to toggle the class dynamically
   const navClass = `${className} ${scrolled ? 'scrolled' : ''}`;
 
+  const [isOverlayOpen, setOverlayOpen] = useState(false);
+
   return (
     <>
       <nav className={navClass}>
@@ -38,12 +41,7 @@ const Navbar = ({ className = '' }) => {
             <Image src="/emoji.png" width='80' height='80' alt='Memoji José Luis Rosas Baza'></Image>
           </Link>
           <div className="menu">
-            <Link href="https://wa.me/525516777083?text=Hey%20Jose%20Luis%2C%20let's%20work%20together" className='btn secondary'>
-              my resume
-            </Link>
-            <Link href="https://wa.me/525516777083?text=Hey%20Jose%20Luis%2C%20let's%20work%20together" className='btn main'>
-              let&#39;s connect
-            </Link>
+            <button onClick={() => setOverlayOpen(true)} className='btn main'>let&#39;s connect</button>
           </div>
         </div>
       </nav>
@@ -52,9 +50,34 @@ const Navbar = ({ className = '' }) => {
           <div className="button">About me</div>
           <div className="button">Highlights</div>
           <div className="button">Projects</div>
-          <div className="button main">Connect</div>
+          <button onClick={() => setOverlayOpen(true)} className='button main'>Connect</button>
         </div>
       </div>
+
+      <OverlayCard isOpen={isOverlayOpen} onClose={() => setOverlayOpen(false)}>
+          <div className="my-200">
+            <h3>
+              🥳
+            </h3>
+            <h6>Lets connect!!</h6>
+            <p>
+              It will be awesome to work togheter lets have a talk and start collaborating
+            </p>
+          </div>
+          <Link href="https://api.whatsapp.com/send/?phone=525516777083&text=Hey+Jose+Luis%2C+let%27s+work+together&type=phone_number&app_absent=0">
+            <button className="btn ghost">💬 Whatsapp</button> 
+          </Link>
+          <Link href="mailto:jlrosasb@gmail.com">
+            <button className="btn ghost">📫 jlrosasb@gmail.com</button>  
+          </Link>
+          <Link href="tel:5516777083">
+            <button className="btn ghost">☎️ +52 55 1677 7083</button>  
+          </Link>
+          <Link href="https://calendly.com/jlrosasb/30min" target='blank'>
+            <button className="btn ghost">🗓️ Book a call</button> 
+          </Link>
+             
+        </OverlayCard>
       
     </>
   );

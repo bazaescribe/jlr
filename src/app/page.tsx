@@ -1,21 +1,15 @@
 'use client'
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Image from 'next/image'
 import Navbar from '@/components/molecules/navbar'
 import Link from 'next/link'
-import Position from '@/components/molecules/position';
-import Footer from '@/components/organisms/footer';
-import Project from '@/components/molecules/project';
-import HorizontalScroll from '@/components/organisms/horizontalScroll';
 import AOS from 'aos';
 import 'aos/dist/aos.css'
-import ProjectSlide from '@/components/organisms/ProjectSlide';
-import Herotwo from '@/components/organisms/Herotwo'
-import Carousel from '@/components/molecules/carousel';
-import ImageGrid from '@/components/organisms/ImageGrid';
+
 import "./page.module.css"
+import OverlayCard from '@/components/organisms/OverlayCard';
 
 import Hero from '@/components/organisms/Hero';
 import Highlights from '@/components/molecules/highlights';
@@ -134,7 +128,8 @@ export default function Home() {
     },
   ];
   
-  
+  const [isOverlayOpen, setOverlayOpen] = useState(false);
+
   return (
     <>
       <Navbar />
@@ -144,6 +139,7 @@ export default function Home() {
 
         <section className='d-flex flex-direction-column gap-100'>
           <h6>About me</h6>
+
           <p className='easy'>
             As a seasoned product designer with a robust background in web development and UX, I&#39;ve had the privilege of shaping digital experiences that delight users and achieve business goals. From teaching the next generation of designers to leading product strategy at innovative startups, my journey has been driven by a passion for design and a commitment to excellence.
           </p>
