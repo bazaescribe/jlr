@@ -1,0 +1,135 @@
+.logo {
+  width: 120px;
+  height: auto;
+}
+
+@keyframes slideUp {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 -20px; /* Adjust this value to control the speed */
+  }
+}
+
+.header {
+  padding: 160px 0px;
+  padding-top: 176px;
+  background-color: transparent;
+  opacity: 1;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px), 
+                    linear-gradient(to right, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 20px 20px;
+  animation: slideUp 1s linear infinite; /* Adjust the duration to control the speed */
+}
+
+.shortDescription {
+  font-size: 18px;
+}
+
+.coverPhoto {
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  box-shadow: 0px 12px 64px -12px rgba(0, 0, 0, 0.16);
+}
+
+
+.numbersSection {
+  display: flex;
+  justify-content: flex-start;
+  gap: 32px;
+}
+
+.numberItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.number {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 16px;
+}
+
+.introduction {
+  margin: 20px 0;
+}
+
+.details {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 96px;
+}
+
+.detailItem {
+  margin: 20px 0;
+}
+
+.detailItem img {
+  box-shadow: 0px 4px 48px -24px rgba(0, 0, 0, 0.16);
+}
+
+.detailItem p {
+  opacity: 0.7;
+}
+
+.videoGallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+  gap: 16px; /* Optional: Add some gap between videos */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.videoGallery video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the entire space without distortion */
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.galleryItem {
+  line-height: 0px;
+  transition: 250ms ease all;
+}
+
+.galleryItem:hover {
+  transform: scale(1.02);
+}
+
+.galleryItem img {
+  width: 100%;
+  box-sizing: border-box;
+  height: auto;
+  object-fit: cover;
+  line-height: 0px;
+}
+
+@media screen and (max-width: 920px) {
+  .gallery, .videoGallery {
+    grid-template-columns: repeat(1, 1fr); /* Change to one column */
+    grid-auto-rows: auto;
+  }
+}
+
+.videoGallery, .gallery {
+  overflow: hidden; /* Ensure no horizontal overflow */
+  min-width: 1%; /* Allow the element to shrink */
+}
+
+.videoGallery video, .galleryItem img {
+  max-width: 100%; /* Ensure the video or image doesn't overflow */
+}
+

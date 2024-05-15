@@ -20,7 +20,7 @@ export default function DevF() {
           <div className="container d-flex flex-direction-column gap-500">
             <div className='d-flex flex-direction-column gap-050'>
               <h5 className="sans">dev.f</h5>
-              <h2>Challenges in the expansion of tech education</h2>
+              <h4>Challenges in the expansion of tech education</h4>
               <p>Following the lockdowns, the company shifted from in-person classes to remote ones, this boosted the impact but brought new challenges all across the team. </p>
             </div>
             <div className='full-width-image-container' style={{ height: '480px'}}>

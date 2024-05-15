@@ -87,45 +87,52 @@ export default function Home() {
     {
       id: '1',
       image: '/projects/thumbnails/homely.png', // Update with your actual image paths
-      title: 'Transforming a Cleaning Giant: Pivot to B2B Excellence',
+      title: 'Bringing the home joy to the workplace',
       company: 'Homely',
+      URL: 'homely',
     },
-    {
-      id: '2',
-      image: '/projects/thumbnails/aliada.png',
-      title: 'Revitalizing Tech Legacy: A Brand Refresh for Tomorrow',
-      company: 'Aliada',
-    },
+    // {
+    //   id: '2',
+    //   image: '/projects/thumbnails/aliada.png',
+    //   title: 'Revitalizing Tech Legacy: A Brand Refresh for Tomorrow',
+    //   company: 'Aliada',
+    //   URL: 'aliada',
+    // },
     {
       id: '3',
       image: '/projects/thumbnails/atomic.png',
-      title: 'Unified Excellence: Design System for Multi-Product Bootcamp',
+      title: 'Atomic: The building blocks for tech education',
       company: 'DEV.F',
+      URL: 'atomic',
     },
-    {
-      id: '4',
-      image: '/projects/thumbnails/careme.png',
-      title: 'Empowering Care: Kickstarting a Caregiver Revolution',
-      company: 'careme.mx',
-    },
-    {
-      id: '5',
-      image: '/projects/thumbnails/campus.png',
-      title: 'Innovate to Educate: Launching a Next-Gen Learning Platform',
-      company: 'DEV.F',
-    },
-    {
-      id: '6',
-      image: '/projects/thumbnails/promos.png',
-      title: 'Strategic Growth: Streamlining Student Acquisition for Bootcamp Success',
-      company: 'DEV.F',
-    },
-    {
-      id: '7',
-      image: '/projects/thumbnails/jlr.png',
-      title: 'My Signature Mark: Branding and Site for JLR Consulting',
-      company: 'JLR Consulting',
-    },
+    // {
+    //   id: '4',
+    //   image: '/projects/thumbnails/careme.png',
+    //   title: 'Empowering Care: Kickstarting a Caregiver Revolution',
+    //   company: 'careme.mx',
+    //   URL: 'careme',
+    // },
+    // {
+    //   id: '5',
+    //   image: '/projects/thumbnails/campus.png',
+    //   title: 'Innovate to Educate: Launching a Next-Gen Learning Platform',
+    //   company: 'DEV.F',
+    //   URL: 'campus',
+    // },
+    // {
+    //   id: '6',
+    //   image: '/projects/thumbnails/promos.png',
+    //   title: 'Strategic Growth: Streamlining Student Acquisition for Bootcamp Success',
+    //   company: 'DEV.F',
+    //   URL: 'funnel',
+    // },
+    // {
+    //   id: '7',
+    //   image: '/projects/thumbnails/jlr.png',
+    //   title: 'My Signature Mark: Branding and Site for JLR Consulting',
+    //   company: 'JLR Consulting',
+    //   URL: 'jlr',
+    // },
   ];
   
   const [isOverlayOpen, setOverlayOpen] = useState(false);

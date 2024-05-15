@@ -350,7 +350,6 @@ p {
 
 p.easy {
   max-width: 520px;
-  color: var(--color-grey);
 }
 
 .sans { font-family: 'Inter', sans-serif; }

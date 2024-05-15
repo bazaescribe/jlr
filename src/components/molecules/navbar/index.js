@@ -38,7 +38,7 @@ const Navbar = ({ className = '' }) => {
       <nav className={navClass}>
         <div className="container">
           <Link href="/">
-            <Image src="/emoji.png" width='80' height='80' alt='Memoji José Luis Rosas Baza'></Image>
+            <Image src="/emoji.png" width='64' height='64' alt='Memoji José Luis Rosas Baza'></Image>
           </Link>
           <div className="menu">
             <button onClick={() => setOverlayOpen(true)} className='btn main'>let&#39;s connect</button>
@@ -59,16 +59,16 @@ const Navbar = ({ className = '' }) => {
             <h3>
               🥳
             </h3>
-            <h6>Lets connect!!</h6>
+            <h6>Let&#39;s Connect!</h6>
             <p>
-              It will be awesome to work togheter lets have a talk and start collaborating
+              It will be awesome to work together. Let&#39;s have a talk and start collaborating.
             </p>
           </div>
           <Link href="https://api.whatsapp.com/send/?phone=525516777083&text=Hey+Jose+Luis%2C+let%27s+work+together&type=phone_number&app_absent=0">
             <button className="btn ghost">💬 Whatsapp</button> 
           </Link>
           <Link href="mailto:jlrosasb@gmail.com">
-            <button className="btn ghost">📫 jlrosasb@gmail.com</button>  
+            <button className="btn ghost">📧 jlrosasb@gmail.com</button>  
           </Link>
           <Link href="tel:5516777083">
             <button className="btn ghost">☎️ +52 55 1677 7083</button>  

@@ -7,12 +7,14 @@ import Link from 'next/link';
 
 const Projects = ({ projects }) => {
 
+  const url = "/projects/" + projects.company;
+
   return (
     <div className='d-grid grid-2-cols'>
       {projects.map((project) => (
         
         // eslint-disable-next-line react/jsx-key
-        <Link href="#">
+        <Link href={"/projects/"+ project.URL}>
           <div
             key={project.id}
             className={styles.project}
