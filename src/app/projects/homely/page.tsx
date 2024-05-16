@@ -36,12 +36,8 @@ const projectData = {
       description: "This centralized dashboard empowers Homely.mx clients to have a clear and comprehensive view of their business operations, enabling them to manage their resources effectively and maintain high standards of service."
     }
   ],
-  videoGallery: [
-
-  ],
-  galleryData: [
-    
-  ],
+  videoGallery: [],
+  galleryData: [],
   bgColor: '#5F48F6',  // Add the background color here
   color: '#fff'
 };

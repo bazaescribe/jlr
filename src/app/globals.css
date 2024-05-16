@@ -500,6 +500,10 @@ a {
   text-align: center;
 }
 
+
+.bold {
+  font-weight: bold;
+}
 /* ==================================== Box model ==================================== */
 /* SECTION DESCRIPTION HERE */
 

@@ -16,6 +16,7 @@ import Hero from '@/components/organisms/Hero';
 import Highlights from '@/components/molecules/highlights';
 import Projects from '@/components/molecules/Projects';
 import Gallery from '@/components/molecules/gallery';
+import Bullet from '@/components/molecules/bullet';
 
 
 export default function Home() {
@@ -149,6 +150,33 @@ export default function Home() {
     { url: '/concepts/img-8.png', description: 'Movie Listing Component' },
     // Add more images and descriptions here
   ];
+
+  const education = [
+    { title: 'Computer Science', desc: 'Instituto Politécnico Nacional', year: '2010 - 2014' },
+    { title: 'Software Development', desc: 'Instituto Politécnico Nacional', year: '2007 - 2010' },
+  ]
+
+  const courses = [
+    { title: 'Front End Developer', desc: 'DEV.F', year: '2014' },
+    { title: 'UX Design', desc: 'DEV.F', year: '2015' },
+    { title: 'Design Sprint', desc: 'Google Launchpad Accelerator', year: '2016, 2019, 2022' },
+  ]
+
+  const media = [
+    { title: 'Shark Tank Mexico', desc: 'Pitching Careme, S6 E5', year: '2022' },
+  ]
+
+  const academic = [
+    { title: 'El futuro del trabajo Latinx y sus trabajos del futuro', desc: 'Universidad Tecmilenio', year: '2022' },
+    { title: 'Sé Líder', desc: 'Universidad de Monterey', year: '2019' },
+    { title: 'Design Thinking', desc: 'Design Week Mexico, Edición Puebla', year: '2019' },
+  ]
+
+  const language = [
+    { title: 'Spanish', desc: 'Native', year: '' },
+    { title: 'English', desc: 'Profesional', year: '' },
+    { title: 'French', desc: 'Basic', year: '' },
+  ]
   
   const [isOverlayOpen, setOverlayOpen] = useState(false);
 
@@ -195,6 +223,62 @@ export default function Home() {
           </p>
           <Gallery items={galleryData}></Gallery>
         </section>
+
+        <section className='d-flex flex-direction-column gap-150'>
+          <h6>Education</h6>
+          {education && education.length > 0 && (
+            <div className='d-flex gap-300 flex-wrap'>
+              {education.map((item, index) => (
+                <Bullet key={index} title={item.title} desc={item.desc} year={item.year}></Bullet>
+              ))}
+            </div>
+          )} 
+        </section>
+
+        <section className='d-flex flex-direction-column gap-150'>
+          <h6>Courses</h6>
+          {courses && courses.length > 0 && (
+            <div className='d-flex gap-300 flex-wrap'>
+              {courses.map((item, index) => (
+                <Bullet key={index} title={item.title} desc={item.desc} year={item.year}></Bullet>
+              ))}
+            </div>
+          )} 
+        </section>
+
+        <section className='d-flex flex-direction-column gap-150'>
+          <h6>Media Appearances</h6>
+          {media && media.length > 0 && (
+            <div className='d-flex gap-300 flex-wrap'>
+              {media.map((item, index) => (
+                <Bullet key={index} title={item.title} desc={item.desc} year={item.year}></Bullet>
+              ))}
+            </div>
+          )} 
+        </section>
+
+        <section className='d-flex flex-direction-column gap-150'>
+          <h6>Academic Colaborations & Talks</h6>
+          {academic && academic.length > 0 && (
+            <div className='d-flex gap-300 flex-wrap'>
+              {academic.map((item, index) => (
+                <Bullet key={index} title={item.title} desc={item.desc} year={item.year}></Bullet>
+              ))}
+            </div>
+          )} 
+        </section>
+
+        <section className='d-flex flex-direction-column gap-150'>
+          <h6>Languages</h6>
+          {language && academic.length > 0 && (
+            <div className='d-flex gap-300 flex-wrap'>
+              {language.map((item, index) => (
+                <Bullet key={index} title={item.title} desc={item.desc} year={item.year}></Bullet>
+              ))}
+            </div>
+          )} 
+        </section>
+
       </main>
       <Footer></Footer>
     </>
