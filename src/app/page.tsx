@@ -95,13 +95,13 @@ export default function Home() {
       company: 'Homely',
       URL: 'homely',
     },
-    // {
-    //   id: '2',
-    //   image: '/projects/thumbnails/aliada.png',
-    //   title: 'Revitalizing Tech Legacy: A Brand Refresh for Tomorrow',
-    //   company: 'Aliada',
-    //   URL: 'aliada',
-    // },
+    {
+      id: '2',
+      image: '/projects/thumbnails/aliada.png',
+      title: 'A Fresh Look for the Future of Domestic Services',
+      company: 'Aliada',
+      URL: 'aliada',
+    },
     {
       id: '3',
       image: '/projects/thumbnails/atomic.png',
@@ -198,7 +198,7 @@ export default function Home() {
               <Image src="/photos/aliada-con.png" height={500} width={644} alt='Conferencia de Aliadas'></Image>
             </div>
             <div className="image-container">
-              <Image src="/photos/shark-tank.png" height={500} width={644} alt='Shark Tank Mexico'></Image>
+              <Image src="/photos/me.jpg" height={500} width={644} alt='José Luis Rosas Baza'></Image>
             </div>
           </div>
         </section>
