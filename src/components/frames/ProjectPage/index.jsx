@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './ProjectDetailTemplate.module.css';
 import Navbar from '@/components/molecules/navbar';
+import Footer from '@/components/organisms/footer';
+
+import Gallery from '@/components/molecules/gallery';
 
 const ProjectDetailTemplate = ({ 
   logo, 
@@ -12,8 +15,8 @@ const ProjectDetailTemplate = ({
   companyDesc,
   introduction, 
   details, 
-  gallery,
   videoGallery,
+  galleryData,
   bgColor, color 
 }) => {
   return (
@@ -63,7 +66,7 @@ const ProjectDetailTemplate = ({
           ))}
         </div>
 
-        {videoGallery && gallery.length > 0 && (
+        {videoGallery && videoGallery.length > 0 && (
           <div className={styles.videoGallery}>
             {videoGallery.map((src, index) => (
               <video key={index} autoPlay playsInline loop muted>
@@ -74,18 +77,13 @@ const ProjectDetailTemplate = ({
           </div>
         )}
 
-
-        {gallery && gallery.length > 0 && (
-          <div className={styles.gallery}>
-            {gallery.map((image, index) => (
-              <div className={styles.galleryItem} key={index}>
-                <img src={image} alt={`Gallery ${index + 1}`} />
-              </div>
-            ))}
-          </div>
+        {galleryData && galleryData.length > 0 && (
+          <Gallery items={galleryData}></Gallery>
         )}
 
       </div>
+
+      <Footer color={color}></Footer>
       
     </div>
   );

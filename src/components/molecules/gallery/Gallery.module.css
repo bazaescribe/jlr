@@ -1,7 +1,14 @@
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 920px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
 }
 
 .galleryItem {
@@ -18,7 +25,7 @@
 }
 
 .galleryItem:hover img {
-  transform: scale(1.02);
+  transform: scale(1.04);
 }
 
 .overlay {

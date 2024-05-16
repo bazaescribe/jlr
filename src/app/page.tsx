@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 
 import Image from 'next/image'
 import Navbar from '@/components/molecules/navbar'
+import Footer from '@/components/organisms/footer';
 import Link from 'next/link'
 import AOS from 'aos';
 import 'aos/dist/aos.css'
@@ -15,6 +16,7 @@ import Hero from '@/components/organisms/Hero';
 import Highlights from '@/components/molecules/highlights';
 import Projects from '@/components/molecules/Projects';
 import Gallery from '@/components/molecules/gallery';
+
 
 export default function Home() {
   useEffect(() => {
@@ -181,7 +183,7 @@ export default function Home() {
         <section className='d-flex flex-direction-column gap-150'>
           <h6>Projects</h6>
           <p className='easy'>
-            Here are some of my higher scope projects that showcase my expertise in product design, user experience, and development. Each project highlights my commitment to creating innovative and impactful digital solutions that drive engagement and deliver results. Explore these projects to see the breadth and depth of my work across different domains.
+          Discover the stories behind my designs where creativity meets functionality, showcasing how thoughtful solutions can transform user experience.
           </p>
           <Projects projects={projectsData} />
         </section>
@@ -189,12 +191,12 @@ export default function Home() {
         <section className='d-flex flex-direction-column gap-150'>
           <h6>Concepts</h6>
           <p className='easy'>
-            Here are some of my higher scope projects that showcase my expertise in product design, user experience, and development. Each project highlights my commitment to creating innovative and impactful digital solutions that drive engagement and deliver results. Explore these projects to see the breadth and depth of my work across different domains.
+            Dive into a gallery of experimental designs, where I play with ideas and innovations, crafting unique solutions purely for the joy of creation.
           </p>
           <Gallery items={galleryData}></Gallery>
         </section>
-        
       </main>
+      <Footer></Footer>
     </>
   )
 }

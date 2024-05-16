@@ -40,13 +40,14 @@ const projectData = {
     '/projects/atomic/tool.mov',
     '/projects/atomic/cta.mov',
   ],
-  gallery: [
-    '/projects/atomic/img-1.png', 
-    '/projects/atomic/img-2.png', 
-    '/projects/atomic/img-3.png', 
-    '/projects/atomic/img-4.png', 
-    '/projects/atomic/img-5.png', 
-    '/projects/atomic/img-6.png', 
+  galleryData: [
+    { url: '/projects/atomic/img-1.png', description: 'Test results component' },
+    { url: '/projects/atomic/img-2.png', description: 'Class visualization' },
+    { url: '/projects/atomic/img-3.png', description: 'Student Small Card' },
+    { url: '/projects/atomic/img-4.png', description: 'Overall performance' },
+    { url: '/projects/atomic/img-5.png', description: 'Lessons and content' },
+    { url: '/projects/atomic/img-6.png', description: 'Instructor review' },
+    // Add more images and descriptions here
   ],
   bgColor: '#160032',  // Add the background color here
   color: '#fff'

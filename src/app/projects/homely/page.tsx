@@ -39,7 +39,7 @@ const projectData = {
   videoGallery: [
 
   ],
-  gallery: [
+  galleryData: [
     
   ],
   bgColor: '#5F48F6',  // Add the background color here
