@@ -300,8 +300,8 @@
 }
 
 ::selection {
-  background-color: #fbc5ff; /* set the background color of the selected text */
-  color: #000; /* set the text color of the selected text */
+  background-color: var(--color-accent); /* set the background color of the selected text */
+  color: var(--color-light); /* set the text color of the selected text */
   text-shadow: none; /* remove any text shadow on the selected text */
 }
 

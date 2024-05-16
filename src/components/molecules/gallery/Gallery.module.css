@@ -1,0 +1,120 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.galleryItem {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.galleryItem img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: 250ms ease all;
+}
+
+.galleryItem:hover img {
+  transform: scale(1.02);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(244, 244, 244, 0.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden; /* Initially hidden */
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease-out;
+  backdrop-filter: blur(12px);
+}
+
+.overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOutDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.overlayContent {
+  max-width: 80%;
+  max-height: 80%;
+  text-align: center;
+  animation: slideInUp 250ms ease-out;
+}
+
+.overlayContent.slideOut {
+  animation: slideOutDown 250ms ease-out;
+}
+
+.overlayContent img {
+  max-width: 100%;
+  max-height: 70vh;
+  box-shadow: 0px 32px 64px -16px rgba(0, 0, 0, 0.16);
+}
+
+.overlayDescription {
+  margin-top: 8px;
+  text-shadow: 0px 0px 24px rgba(0, 0, 0, 1 );
+  color: white;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  font-size: 12px;
+}
+
+.overlayNav {
+  top: -50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-100%);
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+.overlayNav button {
+  background: rgba(0, 0, 0, 0.32);
+  border-radius: 110px;
+  border: 1px solid rgba(244, 244, 244, 0.12);
+  backdrop-filter: blur(12px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.16);
+  padding: 8px 16px;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 250ms ease all;
+}
+
+.overlayNav button:hover {
+  background: rgba(0, 0, 0, 0.24);
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.16);
+}

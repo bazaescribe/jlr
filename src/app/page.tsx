@@ -14,6 +14,7 @@ import OverlayCard from '@/components/organisms/OverlayCard';
 import Hero from '@/components/organisms/Hero';
 import Highlights from '@/components/molecules/highlights';
 import Projects from '@/components/molecules/Projects';
+import Gallery from '@/components/molecules/gallery';
 
 export default function Home() {
   useEffect(() => {
@@ -134,6 +135,18 @@ export default function Home() {
     //   URL: 'jlr',
     // },
   ];
+
+  const galleryData = [
+    { url: '/concepts/img-1.png', description: 'App CDMX Redesign' },
+    { url: '/concepts/img-2.png', description: 'Sales Report App' },
+    { url: '/concepts/img-3.png', description: 'Cinema Tickets Concept' },
+    { url: '/concepts/img-4.png', description: 'Cloud Status Mobile App' },
+    { url: '/concepts/img-5.png', description: 'Image Recognition App' },
+    { url: '/concepts/img-6.png', description: 'Cinema Tickets Concept 2' },
+    { url: '/concepts/img-7.png', description: 'News App for Milenio' },
+    { url: '/concepts/img-8.png', description: 'Movie Listing Component' },
+    // Add more images and descriptions here
+  ];
   
   const [isOverlayOpen, setOverlayOpen] = useState(false);
 
@@ -171,6 +184,14 @@ export default function Home() {
             Here are some of my higher scope projects that showcase my expertise in product design, user experience, and development. Each project highlights my commitment to creating innovative and impactful digital solutions that drive engagement and deliver results. Explore these projects to see the breadth and depth of my work across different domains.
           </p>
           <Projects projects={projectsData} />
+        </section>
+
+        <section className='d-flex flex-direction-column gap-150'>
+          <h6>Concepts</h6>
+          <p className='easy'>
+            Here are some of my higher scope projects that showcase my expertise in product design, user experience, and development. Each project highlights my commitment to creating innovative and impactful digital solutions that drive engagement and deliver results. Explore these projects to see the breadth and depth of my work across different domains.
+          </p>
+          <Gallery items={galleryData}></Gallery>
         </section>
         
       </main>
